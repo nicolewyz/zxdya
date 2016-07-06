@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" 
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+		http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context-3.2.xsd"
+	default-lazy-init="true">
+	
+	<!-- 加载配置属性文件 -->
+	<!-- <context:property-placeholder ignore-unresolvable="true" location="classpath:jeesite.properties" />
+	
+	<util:constant id="luceneVersion" static-field="org.apache.lucene.util.Version.LUCENE_6_1_0"></util:constant>
+	
+	<bean id="luceneDirectory" class="org.apache.lucene.store.SimpleFSDirectory">
+		<constructor-arg>
+			<bean class="java.io.File">
+				<constructor-arg value="${lucene.path}" />
+			</bean>
+		</constructor-arg>
+	</bean>
+
+	<bean id="analyzer" class="org.apache.lucene.analysis.cn.smart.SmartChineseAnalyzer">
+		<constructor-arg value="true"></constructor-arg>
+	</bean>
+
+	<bean id="indexWriterConfig" class="org.apache.lucene.index.IndexWriterConfig">
+		<constructor-arg name="matchVersion" ref="luceneVersion" />
+		<constructor-arg name="analyzer" ref="analyzer"></constructor-arg>
+	</bean>
+
+	<bean id="indexWriter" class="org.apache.lucene.index.IndexWriter">
+		<constructor-arg name="d" ref="luceneDirectory" />
+		<constructor-arg name="conf" ref="indexWriterConfig" />
+	</bean>
+	
+	<bean id="indexReader" class="org.apache.lucene.index.IndexReader"  factory-method="open" scope="prototype"> 
+		<constructor-arg ref="luceneDirectory"/> 
+	</bean> 
+	
+	<bean id="indexSearcher" class="org.apache.lucene.search.IndexSearcher" depends-on="indexWriter" scope="prototype"> 
+		<constructor-arg ref="indexReader"/> 
+	</bean>  -->
+	
+	<!-- <bean id="queryParser" class="org.apache.lucene.queryparser.classic.QueryParser" scope="prototype"> 
+		<constructor-arg ref="luceneVersion"/> 
+		<constructor-arg value="content" /> 
+		<constructor-arg ref="analyzer"/> 
+	</bean>  -->
+	
+	<!-- <bean id="hitsPerPage" class="java.lang.Integer" factory-method="valueOf"> 
+		<constructor-arg value="${lucene.hitsPerPage}" /> 
+	</bean> 
+	<bean id="fragSize" class="java.lang.Integer" factory-method="valueOf"> 
+		<constructor-arg value="${lucene.fragSize}" /> 
+	</bean> 
+	<bean id="phraseSlop" class="java.lang.Integer" factory-method="valueOf"> 
+		<constructor-arg value="${lucene.phraseSlop}" /> 
+	</bean>  -->
+	
+
+</beans>  
