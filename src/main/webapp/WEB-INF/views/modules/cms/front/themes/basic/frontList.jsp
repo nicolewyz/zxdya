@@ -31,7 +31,7 @@
 		  <h5>&nbsp;&nbsp;<i class="icon-home"></i> ${category.name}</h5>
 		  <c:if test="${category.module eq 'article'}">
 			<ul><c:forEach items="${page.list}" var="article">
-				<li><span class="pull-right"><fmt:formatDate value="${article.updateDate}" pattern="yyyy.MM.dd"/></span><a href="${article.url}" style="color:${article.color}" target=_blank>${fns:abbr(article.title,96)}</a></li>
+				<li><span class="pull-right"><fmt:formatDate value="${article.updateDate}" pattern="yyyy-MM-dd"/></span><a href="${article.url}" style="color:${article.color}" target=_blank>${fns:abbr(article.title,96)}</a></li>
 			</c:forEach></ul>
 			<div class="pagination">${page}</div>
 			<script type="text/javascript">

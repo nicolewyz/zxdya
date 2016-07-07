@@ -134,7 +134,7 @@ public class ExecuteSQLThread implements Runnable {
 				//System.out.println("insert cms_article_data one...");
 				
 				sql.delete(0, sql.toString().length());//清空
-				sql.append("insert into cms_article values(?,'"+ category +"',?,'','','','电影东东,电影天堂,最新电影','电影东东,最新电影,高清电影,经典电影,最新连续剧',0,null,0,',2,','','',1,?,1,?,null,0)");
+				sql.append("insert into cms_article values(?,'"+ category +"',?,'','','','电影东东,电影天堂,最新电影','电影东东,最新电影,高清电影,经典电影,最新连续剧',0,null,0,'','','',1,?,1,?,null,0)");
 		        //设置 sql values 的值
 		        List<String> sqlValuesArticle = new ArrayList<>();
 		        sqlValuesArticle.add(id);

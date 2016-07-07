@@ -111,7 +111,7 @@ public class LuceneUtil {
 				//写索引时，去掉相关的HTML标签
 				doc.add(new TextField("content", gndy.getContent()==null?"":com.thinkgem.jeesite.common.utils.StringUtils.replaceHtml(gndy.getContent()), Store.YES));
 				doc.add(new StringField("publishDate", gndy.getPublishDate(), Store.YES));
-				doc.add(new StringField("category", gndy.getCategory(), Store.YES));
+				doc.add(new StringField("category", gndy.getCategory()==null?"":gndy.getCategory(), Store.YES));
 				
 				writer.addDocument(doc);
 				
@@ -148,7 +148,7 @@ public class LuceneUtil {
 			Document doc = new Document();
 			doc.add(new StringField("id", gndy.getId(), Store.YES));
 			doc.add(new StringField("name", gndy.getName(), Store.YES));
-			doc.add(new TextField("content", gndy.getContent(), Store.YES));
+			doc.add(new TextField("content", gndy.getContent()==null?"":com.thinkgem.jeesite.common.utils.StringUtils.replaceHtml(gndy.getContent()), Store.YES));
 			doc.add(new StringField("publishDate", gndy.getPublishDate(), Store.YES));
 			doc.add(new StringField("category", gndy.getCategory()==null ?"":gndy.getCategory(), Store.YES));
 			writer.updateDocument(new Term("id", gndy.getId()), doc);

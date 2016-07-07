@@ -65,7 +65,7 @@ public class DBEXEMport {
 	 * @param type
 	 * @param category
 	 */
-	@Scheduled(cron = "0 45 1,8,17,22 * * ?")
+	@Scheduled(cron = "0 45 1,8,17,23 * * ?")
 	public void executScheduled(){
 		logger.info("-------enter executScheduled--------------");
 		
