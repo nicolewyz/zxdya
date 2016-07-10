@@ -1,4 +1,4 @@
-package com.thinkgem.jeesite.modules.crawler.webmagic.samples.ygdy;
+package com.thinkgem.jeesite.modules.crawler.webmagic.dyResource;
 /**
  * 知乎用户信息
  * @author antgan

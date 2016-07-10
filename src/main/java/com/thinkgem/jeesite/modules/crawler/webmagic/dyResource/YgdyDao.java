@@ -1,4 +1,4 @@
-package com.thinkgem.jeesite.modules.crawler.webmagic.samples.ygdy;
+package com.thinkgem.jeesite.modules.crawler.webmagic.dyResource;
 
 import java.sql.SQLException;
 import java.util.Date;
@@ -61,5 +61,13 @@ public interface YgdyDao {
      * @return
      */
     public int insertIMDBTop250(String...strings )  throws SQLException ;
+    
+    /**
+     * 插入如历年最佳外语电影等
+     * @param strings
+     * @return
+     * @throws SQLException
+     */
+    public int insertDoubanTop(String...strings )  throws SQLException ;
     
 }

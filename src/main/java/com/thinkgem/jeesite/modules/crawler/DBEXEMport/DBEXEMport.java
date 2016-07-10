@@ -8,10 +8,10 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import com.thinkgem.jeesite.common.index.LuceneUtil;
-import com.thinkgem.jeesite.modules.crawler.webmagic.samples.ygdy.DBHelper;
-import com.thinkgem.jeesite.modules.crawler.webmagic.samples.ygdy.NewIncreMain;
-import com.thinkgem.jeesite.modules.crawler.webmagic.samples.ygdy.YgdyDao;
-import com.thinkgem.jeesite.modules.crawler.webmagic.samples.ygdy.YgdyDaoImpl;
+import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.DBHelper;
+import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.NewIncreMain;
+import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.YgdyDao;
+import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.YgdyDaoImpl;
 
 /**
  * 爬虫完保存到mysql后，然后导入到相应的表中的逻辑处理

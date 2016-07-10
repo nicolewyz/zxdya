@@ -23,8 +23,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.thinkgem.jeesite.modules.cms.web.ArticleController;
 import com.thinkgem.jeesite.modules.crawler.DBEXEMport.Gndy;
-import com.thinkgem.jeesite.modules.crawler.webmagic.samples.ygdy.YgdyDao;
-import com.thinkgem.jeesite.modules.crawler.webmagic.samples.ygdy.YgdyDaoImpl;
+import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.YgdyDao;
+import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.YgdyDaoImpl;
 
 /**
  * 对lucene相关的一些增删改查

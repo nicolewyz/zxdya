@@ -1,4 +1,4 @@
-package com.thinkgem.jeesite.modules.crawler.webmagic.samples.ygdy;
+package com.thinkgem.jeesite.modules.crawler.webmagic.dyResource;
 import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -122,6 +122,23 @@ public class YgdyDaoImpl implements YgdyDao{
         sql.append("INSERT INTO cms_top_rated  ( `namezh`,`nameen`,`nameothers`,`onyear`,`rate`,`sorted`,`rate_users`,`img_url`,`publishTime`,`type`)")
         //`key`,`name`,identity,location,profession,sex,school,major,recommend,picUrl,agree,thanks,ask,answer,article,collection
         .append("VALUES (? , ? , ? , ? , ?, ?,?,?,?,? ) ");
+        //设置 sql values 的值
+        List<String> sqlValues = new ArrayList<>();
+        for(String str : strs){
+        	
+        	sqlValues.add(str);
+        }
+        int result = dbhelper.executeUpdate(sql.toString(), sqlValues);
+        return result;
+	}
+
+	@Override
+	public int insertDoubanTop(String... strs) throws SQLException {
+		DBHelper dbhelper = new DBHelper();
+        StringBuffer sql = new StringBuffer();
+        sql.append("INSERT INTO cms_top_rated  ( `namezh`,`nameothers`,`onyear`,`rate`,`rate_users`,`img_url`,`publishTime`,`type`,`movie_info`,`comment`)")
+        //`key`,`name`,identity,location,profession,sex,school,major,recommend,picUrl,agree,thanks,ask,answer,article,collection
+        .append("VALUES (?,? , ? , ? , ? , ?, ?,?,?,? ) ");
         //设置 sql values 的值
         List<String> sqlValues = new ArrayList<>();
         for(String str : strs){

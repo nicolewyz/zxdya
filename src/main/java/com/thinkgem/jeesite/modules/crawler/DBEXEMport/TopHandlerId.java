@@ -17,10 +17,10 @@ import org.springframework.stereotype.Service;
 import com.thinkgem.jeesite.common.index.LuceneUtil;
 import com.thinkgem.jeesite.modules.cms.entity.Article;
 import com.thinkgem.jeesite.modules.cms.entity.ArticleData;
-import com.thinkgem.jeesite.modules.crawler.webmagic.samples.ygdy.DBHelper;
-import com.thinkgem.jeesite.modules.crawler.webmagic.samples.ygdy.NewIncreMain;
-import com.thinkgem.jeesite.modules.crawler.webmagic.samples.ygdy.YgdyDao;
-import com.thinkgem.jeesite.modules.crawler.webmagic.samples.ygdy.YgdyDaoImpl;
+import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.DBHelper;
+import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.NewIncreMain;
+import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.YgdyDao;
+import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.YgdyDaoImpl;
 
 /**
  * 处理cms_top_rated表中，给加上cms_article的关联

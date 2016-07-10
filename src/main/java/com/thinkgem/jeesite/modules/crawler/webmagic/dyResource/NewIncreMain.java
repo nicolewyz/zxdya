@@ -1,4 +1,4 @@
-package com.thinkgem.jeesite.modules.crawler.webmagic.samples.ygdy;
+package com.thinkgem.jeesite.modules.crawler.webmagic.dyResource;
 
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;

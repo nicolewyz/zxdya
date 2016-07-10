@@ -1,4 +1,4 @@
-package com.thinkgem.jeesite.modules.crawler.webmagic.samples.ygdy;
+package com.thinkgem.jeesite.modules.crawler.webmagic.filmsInfo;
 
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -6,6 +6,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.YgdyDao;
+import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.YgdyDaoImpl;
 
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;

@@ -1,6 +1,10 @@
-package com.thinkgem.jeesite.modules.crawler.webmagic.samples.ygdy;
+package com.thinkgem.jeesite.modules.crawler.webmagic.filmsInfo;
 
 import java.util.Date;
+
+import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.YgdyArticle;
+import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.YgdyDao;
+import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.YgdyDaoImpl;
 
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
