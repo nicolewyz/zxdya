@@ -200,7 +200,7 @@
 						</table>
 					</p>
 					<div align="center">
-						<div class="fl">
+						<div class="f ">
 							<script type="text/javascript"
 								src="http://www.6vhao.com/d/gg3002.js"></script>
 						</div>
