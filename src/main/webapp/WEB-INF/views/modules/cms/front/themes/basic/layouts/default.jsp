@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>${site.title} - <sitemesh:title default="电影东东"/> - 最新电影 - 高清电影 - 最热电影 - 经典电影 - 免费电影 - 最新大片 - 最新连续剧  - 最新美剧 </title>
+	<title>${site.title} - <sitemesh:title default="电影东东"/> - 最新电影 - 免费下载 - 高清电影 - 经典电影 - 免费电影 - 最新大片 - 最新连续剧  - 最新美剧 </title>
 	<%@include file="/WEB-INF/views/modules/cms/front/include/head.jsp" %>
 	<!-- Baidu tongji analytics -->
 	<script>var _hmt = _hmt || [];(function() {  var hm = document.createElement("script");  hm.src = "//hm.baidu.com/hm.js?79e3009a98e37abe72603a2e9ac366ca";  var s = document.getElementsByTagName("script")[0];  s.parentNode.insertBefore(hm, s);})();</script>
@@ -102,7 +102,6 @@
 		                return false; 
 		}); 
 	}); 
-	
 	
 	</script> 
 	

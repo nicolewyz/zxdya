@@ -96,6 +96,10 @@ public class ExecuteSQLThread implements Runnable {
 						.replaceAll("<a", "<a rel=\"nofollow\"").replaceAll("<img", "<img alt=\"电影东东\"").replaceAll("\"", "\'")): t);
 				
 				gndy.setName(replaceString(rs.getString("name")));
+				
+				//若不存在《》，则无法取真正的标题，因此过滤
+				if(! gndy.getName().contains("《")) continue;
+				
 				gndy.setUrl(rs.getString("url"));
 				gndy.setPublishDate(rs.getString("publishDate"));
 				
@@ -134,12 +138,13 @@ public class ExecuteSQLThread implements Runnable {
 				//System.out.println("insert cms_article_data one...");
 				
 				sql.delete(0, sql.toString().length());//清空
-				sql.append("insert into cms_article values(?,'"+ category +"',?,'','','','电影东东,最新电影,电影下载','电影东东,最新电影,高清电影,经典电影,最新连续剧',0,null,0,'','','',1,?,1,?,null,0)");
+				sql.append("insert into cms_article values(?,'"+ category +"',?,?,'','','','电影东东,最新电影,电影下载','电影东东,最新电影,高清电影,经典电影,最新连续剧',0,null,0,'','','',1,?,1,?,null,0)");
 		        //设置 sql values 的值
 		        List<String> sqlValuesArticle = new ArrayList<>();
 		        sqlValuesArticle.add(id);
 		        //sqlValuesArticle.add(gndy.getCategory());
 		        sqlValuesArticle.add(gndy.getName());
+		        sqlValuesArticle.add(gndy.getName().substring(gndy.getName().indexOf("《")+1,gndy.getName().indexOf("》")));
 		        sqlValuesArticle.add(gndy.getPublishDate());
 		        sqlValuesArticle.add(gndy.getPublishDate());
 		        
@@ -152,6 +157,7 @@ public class ExecuteSQLThread implements Runnable {
 		        gndys.add(gndy);
 			}
 			
+			//添加到索引
 			try {
 				logger.info( "------create index start >>>>>>>>>>>>>>>>" +type);
 				//LuceneUtil luceneUtil = new LuceneUtil();
@@ -165,6 +171,14 @@ public class ExecuteSQLThread implements Runnable {
 			} catch (DocException e1) {
 				e1.printStackTrace();
 			}
+			
+			//主动推送百度
+			PushBaidu pushBaidu = new PushBaidu();
+			for(Gndy g : gndys){
+				
+				pushBaidu.call(g.getId());
+			}
+			
 			
 			//更新toArticle的时间
 	        YgdyDao ygdyDao = new YgdyDaoImpl();

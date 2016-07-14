@@ -1,1791 +1,467 @@
 
-<!DOCTYPE html>
-<html lang="zh-cmn-Hans" class="ua-windows ua-webkit">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta name="renderer" content="webkit">
-<meta name="referrer" content="always">
-<title>豆瓣电影TOP250</title>
-
-<meta name="baidu-site-verification" content="cZdR4xxR7RxmM4zE" />
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
-
-<link rel="apple-touch-icon"
-	href="https://img3.doubanio.com/f/movie/d59b2715fdea4968a450ee5f6c95c7d7a2030065/pics/movie/apple-touch-icon.png">
-<link
-	href="https://img3.doubanio.com/f/shire/69fd52df10c14b18d614f998f9bbb2ae88f38e36/css/douban.css"
-	rel="stylesheet" type="text/css">
-<link
-	href="https://img3.doubanio.com/f/shire/905cdec30f13cd440e6f988dc5d2d99919f5a1d5/css/separation/_all.css"
-	rel="stylesheet" type="text/css">
-<script type="text/javascript">var _head_start = new Date();</script>
-<script type="text/javascript"
-	src="https://img3.doubanio.com/f/movie/e9d9543ebc06f2964039a2e94898f84ce77fc070/js/movie/lib/jquery.js"></script>
-<script type="text/javascript"
-	src="https://img3.doubanio.com/f/shire/71ac0453da20ef0d46981120323c692ebfc729b5/js/douban.js"></script>
-<script type="text/javascript"
-	src="https://img3.doubanio.com/f/shire/0a62663763aed4fe860029f99d1755b8caa524e7/js/separation/_all.js"></script>
-
-<link
-	href="https://img3.doubanio.com/f/movie/dcfd6c93a0b44f2495c6ab3cdf21d8508b97bb03/css/movie/top_movies.css"
-	rel="stylesheet" type="text/css" />
-<script type="text/javascript"
-	src="https://img3.doubanio.com/f/shire/29449d396dacb28fd9949c709ccf02a46b910156/js/do.js"
-	data-cfg-autoload="false"></script>
-<script type='text/javascript'>
-    Do.ready(function(){
-            $("#mine-selector input[type='checkbox']").click(function(){
-                var val = $(this).is(":checked")?$(this).val():"";
-                window.location.href = '/top250?filter=' + val;
-            })
-    })
-</script>
-
-<style type="text/css">
-.site-nav-logo img {
-	margin-bottom: 0;
-}
-</style>
-<script type="text/javascript"></script>
-<link rel="stylesheet"
-	href="https://img3.doubanio.com/misc/mixed_static/76f719cdcf77d617.css">
-
-<link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico"
-	type="image/x-icon">
-</head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>2016动作奇幻《魔兽》720p.HD中英双字，免费下载，迅雷下载，2016最新电影，6v电影下载网</title>
+<meta name="keywords"
+	content="2016动作奇幻《魔兽》720p.HD中英双字下载，2016动作奇幻《魔兽》720p.HD中英双字迅雷下载" />
 <body>
-
-	<script type="text/javascript">var _body_start = new Date();</script>
-
-
-
-
-
-
-
-
-
-
-	<div id="db-global-nav" class="global-nav">
-		<div class="bd">
-
-
-
-
-
-
-			<div class="top-nav-info">
-
-				<span class="perf-metric">
-					<!-- _performtips_ -->
-				</span>
-				<ul>
-
-					<li><a id="top-nav-doumail-link"
-						href="https://www.douban.com/doumail/">豆邮</a></li>
-					<li class="nav-user-account"><a target="_blank"
-						href="https://www.douban.com/accounts/" class="bn-more"> <span>sdd的帐号</span><span
-							class="arrow"></span>
-					</a>
-						<div class="more-items">
-							<table cellpadding="0" cellspacing="0">
-								<tr>
-									<td><a href="https://www.douban.com/mine/">个人主页</a></td>
-								</tr>
-								<tr>
-									<td><a target="_blank"
-										href="https://www.douban.com/mine/orders/">我的订单</a></td>
-								</tr>
-								<tr>
-									<td><a target="_blank"
-										href="https://www.douban.com/accounts/">帐号管理</a></td>
-								</tr>
-								<tr>
-									<td><a
-										href="https://www.douban.com/accounts/logout?source=movie&amp;ck=kMQL">退出</a></td>
-								</tr>
-							</table>
-						</div></li>
-				</ul>
-			</div>
-
-			<div class="top-nav-reminder" style="margin-right: 5px">
-				<a href="https://www.douban.com/notification/" class="lnk-remind">提醒
-					<span class="num"><span>1</span><i></i></span>
-				</a>
-				<div id="top-nav-notimenu" class="more-items">
-					<div class="bd">
-						<p>加载中...</p>
-					</div>
-				</div>
-			</div>
-
-
-			<div class="top-nav-doubanapp">
-
-				<a href="https://www.douban.com/doubanapp/app?channel=top-nav"
-					class="lnk-doubanapp">下载豆瓣客户端</a>
-				<div id="top-nav-appintro" class="more-items">
-					<p class="appintro-title">豆瓣</p>
-					<p class="slogan">和有趣的人做有趣的事</p>
-					<p class="qrcode">扫码直接下载</p>
-					<div class="download">
-						<a
-							href="https://www.douban.com/doubanapp/redirect?channel=top-nav&amp;direct_dl=1&amp;download=iOS">iPhone</a>
-						<span>·</span> <a
-							href="https://www.douban.com/doubanapp/redirect?channel=top-nav&amp;direct_dl=1&amp;download=Android"
-							class="download-android">Android</a>
-					</div>
-				</div>
-				<div id="doubanapp-tip">
-					<a href="https://www.douban.com/doubanapp/app?channel=qipao"
-						class="tip-link">豆瓣 3.0 全新发布</a> <a href="javascript: void 0;"
-						class="tip-close">×</a>
-				</div>
-			</div>
-
-			<div class="global-nav-items">
-				<ul>
-
-
-					<li class=""><a href="https://www.douban.com/" target="_blank"
-						data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-main&#34;,&#34;uid&#34;:&#34;1598036&#34;}">豆瓣</a>
-					</li>
-
-
-					<li class=""><a href="https://book.douban.com/"
-						target="_blank"
-						data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-book&#34;,&#34;uid&#34;:&#34;1598036&#34;}">读书</a>
-					</li>
-
-
-					<li class="on"><a href="https://movie.douban.com/"
-						data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-movie&#34;,&#34;uid&#34;:&#34;1598036&#34;}">电影</a>
-					</li>
-
-
-					<li class=""><a href="https://music.douban.com/"
-						target="_blank"
-						data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-music&#34;,&#34;uid&#34;:&#34;1598036&#34;}">音乐</a>
-					</li>
-
-
-					<li class=""><a href="https://www.douban.com/location/"
-						target="_blank"
-						data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-location&#34;,&#34;uid&#34;:&#34;1598036&#34;}">同城</a>
-					</li>
-
-
-					<li class=""><a href="https://www.douban.com/group/"
-						target="_blank"
-						data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-group&#34;,&#34;uid&#34;:&#34;1598036&#34;}">小组</a>
-					</li>
-
-
-					<li class=""><a
-						href="https://read.douban.com/?dcs=top-nav&amp;dcm=douban"
-						target="_blank"
-						data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-read&#34;,&#34;uid&#34;:&#34;1598036&#34;}">阅读</a>
-					</li>
-
-
-					<li class=""><a href="https://douban.fm/?from_=shire_top_nav"
-						target="_blank"
-						data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-fm&#34;,&#34;uid&#34;:&#34;1598036&#34;}">FM</a>
-					</li>
-
-
-					<li class=""><a
-						href="https://dongxi.douban.com/?dcs=top-nav&amp;dcm=douban"
-						target="_blank"
-						data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-commodity&#34;,&#34;uid&#34;:&#34;1598036&#34;}">东西</a>
-					</li>
-
-
-					<li class=""><a href="https://market.douban.com/"
-						target="_blank"
-						data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-market&#34;,&#34;uid&#34;:&#34;1598036&#34;}">市集</a>
-					</li>
-
-					<li><a href="#more" class="bn-more"><span>更多</span></a>
-						<div class="more-items">
-							<table cellpadding="0" cellspacing="0">
-
-								<tr>
-									<td><a href="https://moment.douban.com" target="_blank"
-										data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-moment&#34;,&#34;uid&#34;:&#34;1598036&#34;}">一刻</a></td>
-								</tr>
-
-								<tr>
-									<td><a href="https://ypy.douban.com" target="_blank"
-										data-moreurl-dict="{&#34;from&#34;:&#34;top-nav-click-ypy&#34;,&#34;uid&#34;:&#34;1598036&#34;}">一拍一</a></td>
-								</tr>
-							</table>
-						</div></li>
-				</ul>
-			</div>
+	<div id="header">
+		<div id="top">
+			<a href="http://www.6vhao.com/">首页</a><a
+				href="http://www.6vhao.com/dy/2012-12-07/19512.html" target=_blank>公告区</a>&nbsp;&nbsp;<a
+				href="http://www.6vhao.com/gq/2012-09-01/18841.html" target=_blank><font
+				color='#FF0000'>6v电影排行榜</font></a>&nbsp;&nbsp;<a
+				href="http://www.6vhao.com/dy/2011-09-20/16090.html" target=_blank>北美票房排行榜</a>&nbsp;&nbsp;<a
+				href="http://www.6vhao.com/s/007/" target=_blank>007电影全集</a>&nbsp;&nbsp;<a
+				href="http://www.6vhao.com/s/gf250/" target=_blank>IMDB250电影</a>&nbsp;&nbsp;<a
+				href="/s/gf/" target=_blank>高评分电影</a>&nbsp;&nbsp;<a
+				href="http://www.6vhao.com/yx/" target="_blank">单机游戏下载</a>&nbsp;&nbsp;<a
+				href="/s/mkvgq/" target=_blank>MKV高清电影</a>&nbsp;&nbsp;<a
+				href="/s/hanguodianying/" target=_blank>美国电影</a>&nbsp;&nbsp;<a
+				href="/s/xijudianying/" target=_blank>欧洲电影</a>&nbsp;&nbsp;<a
+				href="/s/yazhoudianying/" target=_blank>亚洲电影</a>&nbsp;&nbsp;<a
+				href="/s/mzdy/" target=_blank>美洲电影</a>&nbsp;&nbsp;<a
+				href="http://www.6vhao.com/e/tool/gbook/?bid=1" target=_blank>访客留言</a>
+		</div>
+		<div class="log">
+			<a href="/">6V电影</a>
+		</div>
+		<div class="topad">
+			<script src="/d/f4.js"></script>
+		</div>
+		<div class="cr"></div>
+		<div id="menu">
+			<p>
+				<a href="http://www.6vhao.com/">首页</a> <a
+					href="http://www.6vhao.com/dy/" target=_blank>2016最新电影</a> <a
+					href="http://www.6vhao.com/gydy/" target=_blank>国语配音电影</a> <a
+					href="http://www.6vhao.com/zydy/" target=_blank>微电影</a> <a
+					href="http://www.6vhao.com/gq/" target=_blank>经典高清电影</a> <a
+					href="http://www.6vhao.com/jddy/" target=_blank>动画电影</a> <a
+					href="http://www.6vhao.com/3D/" target=_blank>3D电影</a> <a
+					href="http://www.6vhao.com/s/shoujiMP4dianying/" target=_blank>MP4手机电影</a>
+				<a href="http://www.6vhao.com/dlz/" target=_blank>国剧</a> <a
+					href="http://www.6vhao.com/rj/" target=_blank>日韩剧</a> <a
+					href="http://www.6vhao.com/mj/" target=_blank>欧美剧</a> <a
+					href="http://www.6vhao.com/zy/" target=_blank>综艺节目</a> <a
+					href="http://www.6vhao.com/s/gangtaidianying/" target=_blank>港台电影</a>
+				<a href="http://www.6vhao.com/s/jingdiandianying/" target=_blank>日韩电影</a>
+			</p>
+			<p class="bg">
+				<a href="http://www.66ys.tv/" target=_blank>66影视无弹窗版</a> <a
+					href="http://www.dygang.com/1080p/" target=_blank>1080P区</a> <a
+					href="http://www.dygang.com/720P/" target=_blank>720P区</a> 专题分类 ：<a
+					href="http://www.6vhao.net/dy1/" target=_blank>喜剧片</a> <a
+					href="http://www.6vhao.net/dy2/" target=_blank>动作片</a> <a
+					href="http://www.6vhao.net/dy3/" target=_blank>爱情片</a> <a
+					href="http://www.6vhao.net/dy6/" target=_blank>科幻片</a> <a
+					href="http://www.6vhao.net/dy5/" target=_blank>恐怖片</a> <a
+					href="http://www.6vhao.net/zzp/" target=_blank>战争片</a> <a
+					href="http://www.6vhao.net/jddy/" target=_blank>剧情片</a> <a
+					href="http://www.6vhao.net/dy4/" target=_blank>动画片</a> <a
+					href="http://www.6vhao.net/jlp/" target=_blank>纪录片</a> <a
+					href="http://www.6vhao.com/s/yindudianying/" target=_blank>印度电影</a>
+				<a href="http://www.6vhao.com/s/guochandianying/" target=_blank>国产电影</a>
+			</p>
 		</div>
 	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-	<div id="db-nav-movie" class="nav">
-		<div class="nav-wrap">
-			<div class="nav-primary">
-				<div class="nav-logo">
-					<a href="https://movie.douban.com">豆瓣电影</a>
-				</div>
-				<div class="nav-search">
-					<form action="https://movie.douban.com/subject_search" method="get">
-						<fieldset>
-							<legend>搜索：</legend>
-							<label for="inp-query">电影、影人、影院、电视剧</label>
-							<div class="inp">
-								<input id="inp-query" name="search_text" size="22"
-									maxlength="60" value="">
-							</div>
-							<div class="inp-btn">
-								<input type="submit" value="搜索">
-							</div>
-							<input type="hidden" name="cat" value="1002" />
-						</fieldset>
-					</form>
-				</div>
-
-				<!-- header ad begin -->
-
-
-
-
-
-
-
-
-
-				<!-- header ad end -->
-
-			</div>
-		</div>
-		<div class="nav-secondary">
-
-			<div class="nav-items nav-logged-in">
-				<ul>
-
-					<li><a href="https://movie.douban.com/mine">我看</a></li>
-
-					<li><a href="https://movie.douban.com/nowplaying/">影讯&amp;购票</a></li>
-
-					<li><a href="https://movie.douban.com/explore">选电影</a></li>
-
-					<li class="site-nav-bt"><a href="https://movie.douban.com/tv/">电视剧</a>
-					</li>
-
-					<li><a href="https://movie.douban.com/chart">排行榜</a></li>
-
-					<li><a href="https://movie.douban.com/tag/">分类</a></li>
-
-					<li><a href="https://movie.douban.com/review/best/">影评</a></li>
-
-					<li><a href="https://movie.douban.com/annual2015/">2015年度榜单</a></li>
-
-					<li><a
-						href="https://movie.douban.com/standbyme/?source=navigation">豆瓣观影报告</a></li>
-
-				</ul>
-			</div>
-		</div>
+	<div id="a960">
+		<script src="/d/f1.js"></script>
+		<script src="/d/f2.js"></script>
 	</div>
-
-
-
-	<script id="suggResult" type="text/x-jquery-tmpl">
-      <li data-link="{{= url}}">
-          <a href="{{= url}}" onclick="moreurl(this, {from:'movie_search_sugg'})">
-              <img src="{{= img}}" width="40" />
-              <p>
-                  <em>{{= title}}</em>
-                  {{if year}}
-                      <span>{{= year}}</span>
-                  {{/if}}
-                  {{if sub_title}}
-                      <br /><span>{{= sub_title}}</span>
-                  {{/if}}
-                  {{if address}}
-                      <br /><span>{{= address}}</span>
-                  {{/if}}
-                  {{if episode}}
-                      {{if episode=="unknow"}}
-                          <br /><span>集数未知</span>
-                      {{else}}
-                          <br /><span>共{{= episode}}集</span>
-                      {{/if}}
-                  {{/if}}
-              </p>
-          </a>
-      </li>
-  </script>
-
-
-
-
-
-
-
-	<div id="wrapper">
-
-
-
-		<div id="content">
-
-			<h1>豆瓣电影TOP250</h1>
-
-			<div class="grid-16-8 clearfix">
-
-
-				<div class="article">
-					<div class="opt mod">
-						<div class="tabs"></div>
-						<span id="mine-selector"> <input type="checkbox"
-							value="unwatched">我没看过的(250)
-						</span>
-					</div>
-
-
-
-					<ol class="grid_view">
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">1</em> <a
-										href="https://movie.douban.com/subject/1292052/"> <img
-										alt="肖申克的救赎"
-										src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p480747492.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/1292052/" class="">
-											<span class="title">肖申克的救赎</span> <span class="title">&nbsp;/&nbsp;The
-												Shawshank Redemption</span> <span class="other">&nbsp;/&nbsp;月黑高飞(港)
-												/ 刺激1995(台)</span>
-										</a> <span class="playable">[可播放]</span>
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 弗兰克·德拉邦特 Frank Darabont&nbsp;&nbsp;&nbsp;主演: 蒂姆·罗宾斯 Tim
-											Robbins /...<br> 1994&nbsp;/&nbsp;美国&nbsp;/&nbsp;犯罪 剧情
-										</p>
-
-
-										<div class="star">
-											<span class="rating5-t"></span> <span class="rating_num"
-												property="v:average">9.6</span> <span property="v:best"
-												content="10.0"></span> <span>704472人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">希望让人自由。</span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=1292052"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1292052-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=1292052"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1292052-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">2</em> <a
-										href="https://movie.douban.com/subject/1295644/"> <img
-										alt="这个杀手不太冷"
-										src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p511118051.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/1295644/" class="">
-											<span class="title">这个杀手不太冷</span> <span class="title">&nbsp;/&nbsp;Léon</span>
-											<span class="other">&nbsp;/&nbsp;杀手莱昂 / 终极追杀令(台)</span>
-										</a>
-
-
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 吕克·贝松 Luc Besson&nbsp;&nbsp;&nbsp;主演: 让·雷诺 Jean Reno /
-											娜塔丽·波特曼 ...<br> 1994&nbsp;/&nbsp;法国&nbsp;/&nbsp;剧情 动作 犯罪
-										</p>
-
-
-										<div class="star">
-											<span class="rating5-t"></span> <span class="rating_num"
-												property="v:average">9.4</span> <span property="v:best"
-												content="10.0"></span> <span>675091人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">怪蜀黍和小萝莉不得不说的故事。</span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=1295644"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1295644-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=1295644"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1295644-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">3</em> <a
-										href="https://movie.douban.com/subject/1292720/"> <img
-										alt="阿甘正传"
-										src="https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p510876377.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/1292720/" class="">
-											<span class="title">阿甘正传</span> <span class="title">&nbsp;/&nbsp;Forrest
-												Gump</span> <span class="other">&nbsp;/&nbsp;福雷斯特·冈普</span>
-										</a> <span class="playable">[可播放]</span>
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: Robert Zemeckis&nbsp;&nbsp;&nbsp;主演: Tom Hanks / Robin
-											Wright Penn / Gary Sinise<br>
-											1994&nbsp;/&nbsp;美国&nbsp;/&nbsp;剧情 爱情
-										</p>
-
-
-										<div class="star">
-											<span class="rating5-t"></span> <span class="rating_num"
-												property="v:average">9.4</span> <span property="v:best"
-												content="10.0"></span> <span>590603人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">一部美国近现代史。</span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=1292720"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1292720-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=1292720"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1292720-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">4</em> <a
-										href="https://movie.douban.com/subject/1291546/"> <img
-										alt="霸王别姬"
-										src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p1910813120.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/1291546/" class="">
-											<span class="title">霸王别姬</span> <span class="other">&nbsp;/&nbsp;再见，我的妾
-												/ Farewell My Concubine</span>
-										</a> <span class="playable">[可播放]</span>
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 陈凯歌 Kaige Chen&nbsp;&nbsp;&nbsp;主演: 张国荣 Leslie Cheung /
-											张丰毅 Fengyi Zha...<br> 1993&nbsp;/&nbsp;中国大陆
-											香港&nbsp;/&nbsp;剧情 爱情 同性
-										</p>
-
-
-										<div class="star">
-											<span class="rating5-t"></span> <span class="rating_num"
-												property="v:average">9.4</span> <span property="v:best"
-												content="10.0"></span> <span>488595人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">风华绝代。</span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=1291546"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1291546-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=1291546"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1291546-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">5</em> <a
-										href="https://movie.douban.com/subject/1292063/"> <img
-										alt="美丽人生"
-										src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p510861873.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/1292063/" class="">
-											<span class="title">美丽人生</span> <span class="title">&nbsp;/&nbsp;La
-												vita è bella</span> <span class="other">&nbsp;/&nbsp;一个快乐的传说(港)
-												/ Life Is Beautiful</span>
-										</a> <span class="playable">[可播放]</span>
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 罗伯托·贝尼尼 Roberto Benigni&nbsp;&nbsp;&nbsp;主演: 罗伯托·贝尼尼
-											Roberto Beni...<br> 1997&nbsp;/&nbsp;意大利&nbsp;/&nbsp;剧情
-											喜剧 爱情
-										</p>
-
-
-										<div class="star">
-											<span class="rating5-t"></span> <span class="rating_num"
-												property="v:average">9.5</span> <span property="v:best"
-												content="10.0"></span> <span>334957人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">最美的谎言。</span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=1292063"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1292063-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=1292063"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1292063-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">6</em> <a
-										href="https://movie.douban.com/subject/1291561/"> <img
-										alt="千与千寻"
-										src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p1910830216.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/1291561/" class="">
-											<span class="title">千与千寻</span> <span class="title">&nbsp;/&nbsp;千と千尋の神隠し</span>
-											<span class="other">&nbsp;/&nbsp;神隐少女(台) / Spirited
-												Away</span>
-										</a>
-
-
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 宫崎骏 Hayao Miyazaki&nbsp;&nbsp;&nbsp;主演: 柊瑠美 Rumi Hîragi /
-											入野自由 Miy...<br> 2001&nbsp;/&nbsp;日本&nbsp;/&nbsp;剧情 动画 奇幻
-										</p>
-
-
-										<div class="star">
-											<span class="rating45-t"></span> <span class="rating_num"
-												property="v:average">9.2</span> <span property="v:best"
-												content="10.0"></span> <span>535279人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">最好的宫崎骏，最好的久石让。 </span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=1291561"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1291561-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=1291561"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1291561-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">7</em> <a
-										href="https://movie.douban.com/subject/1295124/"> <img
-										alt="辛德勒的名单"
-										src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p492406163.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/1295124/" class="">
-											<span class="title">辛德勒的名单</span> <span class="title">&nbsp;/&nbsp;Schindler&#39;s
-												List</span> <span class="other">&nbsp;/&nbsp;舒特拉的名单(港) /
-												辛德勒名单</span>
-										</a> <span class="playable">[可播放]</span>
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 史蒂文·斯皮尔伯格 Steven Spielberg&nbsp;&nbsp;&nbsp;主演: 连姆·尼森
-											Liam Neeson...<br> 1993&nbsp;/&nbsp;美国&nbsp;/&nbsp;剧情 历史
-											战争
-										</p>
-
-
-										<div class="star">
-											<span class="rating5-t"></span> <span class="rating_num"
-												property="v:average">9.4</span> <span property="v:best"
-												content="10.0"></span> <span>312529人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">拯救一个人，就是拯救整个世界。</span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=1295124"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1295124-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=1295124"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1295124-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">8</em> <a
-										href="https://movie.douban.com/subject/1292001/"> <img
-										alt="海上钢琴师"
-										src="https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p511146957.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/1292001/" class="">
-											<span class="title">海上钢琴师</span> <span class="title">&nbsp;/&nbsp;La
-												leggenda del pianista sull&#39;oceano</span> <span class="other">&nbsp;/&nbsp;声光伴我飞(台)
-												/ 一九零零的传奇(港)</span>
-										</a> <span class="playable">[可播放]</span>
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 朱塞佩·托纳多雷 Giuseppe Tornatore&nbsp;&nbsp;&nbsp;主演: 蒂姆·罗斯
-											Tim Roth / ...<br> 1998&nbsp;/&nbsp;意大利&nbsp;/&nbsp;剧情
-											音乐
-										</p>
-
-
-										<div class="star">
-											<span class="rating45-t"></span> <span class="rating_num"
-												property="v:average">9.2</span> <span property="v:best"
-												content="10.0"></span> <span>508931人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">每个人都要走一条自己坚定了的路，就算是粉身碎骨。 </span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=1292001"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1292001-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=1292001"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1292001-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">9</em> <a
-										href="https://movie.douban.com/subject/2131459/"> <img
-										alt="机器人总动员"
-										src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p449665982.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/2131459/" class="">
-											<span class="title">机器人总动员</span> <span class="title">&nbsp;/&nbsp;WALL·E</span>
-											<span class="other">&nbsp;/&nbsp;瓦力(台) / 太空奇兵·威E(港)</span>
-										</a> <span class="playable">[可播放]</span>
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 安德鲁·斯坦顿 Andrew Stanton&nbsp;&nbsp;&nbsp;主演: 本·贝尔特 Ben
-											Burtt / 艾丽...<br> 2008&nbsp;/&nbsp;美国&nbsp;/&nbsp;喜剧 爱情
-											科幻 动画 冒险
-										</p>
-
-
-										<div class="star">
-											<span class="rating5-t"></span> <span class="rating_num"
-												property="v:average">9.3</span> <span property="v:best"
-												content="10.0"></span> <span>428412人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">小瓦力，大人生。</span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=2131459"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-2131459-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=2131459"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-2131459-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">10</em> <a
-										href="https://movie.douban.com/subject/3541415/"> <img
-										alt="盗梦空间"
-										src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p513344864.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/3541415/" class="">
-											<span class="title">盗梦空间</span> <span class="title">&nbsp;/&nbsp;Inception</span>
-											<span class="other">&nbsp;/&nbsp;潜行凶间(港) / 全面启动(台)</span>
-										</a> <span class="playable">[可播放]</span>
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 克里斯托弗·诺兰 Christopher Nolan&nbsp;&nbsp;&nbsp;主演:
-											莱昂纳多·迪卡普里奥 Le...<br> 2010&nbsp;/&nbsp;美国
-											英国&nbsp;/&nbsp;剧情 动作 科幻 悬疑 冒险
-										</p>
-
-
-										<div class="star">
-											<span class="rating5-t"></span> <span class="rating_num"
-												property="v:average">9.2</span> <span property="v:best"
-												content="10.0"></span> <span>651731人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">诺兰给了我们一场无法盗取的梦。</span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=3541415"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-3541415-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=3541415"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-3541415-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">11</em> <a
-										href="https://movie.douban.com/subject/1292722/"> <img
-										alt="泰坦尼克号"
-										src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p457760035.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/1292722/" class="">
-											<span class="title">泰坦尼克号</span> <span class="title">&nbsp;/&nbsp;Titanic</span>
-											<span class="other">&nbsp;/&nbsp;铁达尼号(港 / 台) </span>
-										</a> <span class="playable">[可播放]</span>
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: James Cameron&nbsp;&nbsp;&nbsp;主演: Leonardo DiCaprio /
-											Kate Winslet / Billy Zane<br>
-											1997&nbsp;/&nbsp;美国&nbsp;/&nbsp;剧情 爱情 灾难
-										</p>
-
-
-										<div class="star">
-											<span class="rating45-t"></span> <span class="rating_num"
-												property="v:average">9.1</span> <span property="v:best"
-												content="10.0"></span> <span>543949人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">失去的才是永恒的。 </span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=1292722"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1292722-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=1292722"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1292722-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">12</em> <a
-										href="https://movie.douban.com/subject/3793023/"> <img
-										alt="三傻大闹宝莱坞"
-										src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p579729551.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/3793023/" class="">
-											<span class="title">三傻大闹宝莱坞</span> <span class="title">&nbsp;/&nbsp;3
-												Idiots</span> <span class="other">&nbsp;/&nbsp;三个傻瓜(台) /
-												作死不离3兄弟(港)</span>
-										</a>
-
-
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 拉库马·希拉尼 Rajkumar Hirani&nbsp;&nbsp;&nbsp;主演: 阿米尔·汗 Aamir
-											Khan / 卡...<br> 2009&nbsp;/&nbsp;印度&nbsp;/&nbsp;剧情 喜剧 爱情
-											歌舞
-										</p>
-
-
-										<div class="star">
-											<span class="rating45-t"></span> <span class="rating_num"
-												property="v:average">9.1</span> <span property="v:best"
-												content="10.0"></span> <span>558575人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">英俊版憨豆，高情商版谢耳朵。</span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=3793023"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-3793023-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=3793023"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-3793023-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">13</em> <a
-										href="https://movie.douban.com/subject/1291549/"> <img
-										alt="放牛班的春天"
-										src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p1910824951.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/1291549/" class="">
-											<span class="title">放牛班的春天</span> <span class="title">&nbsp;/&nbsp;Les
-												choristes</span> <span class="other">&nbsp;/&nbsp;歌声伴我心(港) /
-												唱诗班男孩</span>
-										</a>
-
-
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 克里斯托夫·巴拉蒂 Christophe Barratier&nbsp;&nbsp;&nbsp;主演:
-											杰拉尔·朱诺 Géra...<br> 2004&nbsp;/&nbsp;法国 德国
-											瑞士&nbsp;/&nbsp;剧情 儿童 音乐
-										</p>
-
-
-										<div class="star">
-											<span class="rating45-t"></span> <span class="rating_num"
-												property="v:average">9.2</span> <span property="v:best"
-												content="10.0"></span> <span>376839人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">天籁一般的童声，是最接近上帝的存在。 </span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=1291549"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1291549-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=1291549"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1291549-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">14</em> <a
-										href="https://movie.douban.com/subject/3011091/"> <img
-										alt="忠犬八公的故事"
-										src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p524964016.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/3011091/" class="">
-											<span class="title">忠犬八公的故事</span> <span class="title">&nbsp;/&nbsp;Hachi:
-												A Dog&#39;s Tale</span> <span class="other">&nbsp;/&nbsp;忠犬小八(台)
-												/ 秋田犬八千(港)</span>
-										</a> <span class="playable">[可播放]</span>
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 莱塞·霍尔斯道姆 Lasse Hallström&nbsp;&nbsp;&nbsp;主演: 理查·基尔
-											Richard Ger...<br> 2009&nbsp;/&nbsp;美国 英国&nbsp;/&nbsp;剧情
-										</p>
-
-
-										<div class="star">
-											<span class="rating45-t"></span> <span class="rating_num"
-												property="v:average">9.2</span> <span property="v:best"
-												content="10.0"></span> <span>359158人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">永远都不能忘记你所爱的人。</span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=3011091"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-3011091-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=3011091"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-3011091-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">15</em> <a
-										href="https://movie.douban.com/subject/1292213/"> <img
-										alt="大话西游之大圣娶亲"
-										src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p648365452.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/1292213/" class="">
-											<span class="title">大话西游之大圣娶亲</span> <span class="title">&nbsp;/&nbsp;西遊記大結局之仙履奇緣</span>
-											<span class="other">&nbsp;/&nbsp;西游记完结篇仙履奇缘 / 齐天大圣西游记</span>
-										</a> <span class="playable">[可播放]</span>
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 刘镇伟 Jeffrey Lau&nbsp;&nbsp;&nbsp;主演: 周星驰 Stephen Chow /
-											吴孟达 Man Tat Ng...<br> 1995&nbsp;/&nbsp;香港
-											中国大陆&nbsp;/&nbsp;动作 冒险 喜剧 奇幻 爱情
-										</p>
-
-
-										<div class="star">
-											<span class="rating45-t"></span> <span class="rating_num"
-												property="v:average">9.1</span> <span property="v:best"
-												content="10.0"></span> <span>372730人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">一生所爱。</span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=1292213"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1292213-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=1292213"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1292213-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">16</em> <a
-										href="https://movie.douban.com/subject/1291560/"> <img
-										alt="龙猫"
-										src="https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p1910829638.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/1291560/" class="">
-											<span class="title">龙猫</span> <span class="title">&nbsp;/&nbsp;となりのトトロ</span>
-											<span class="other">&nbsp;/&nbsp;邻家的豆豆龙 / 隔壁的特特罗</span>
-										</a>
-
-
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 宫崎骏 Hayao Miyazaki&nbsp;&nbsp;&nbsp;主演: 日高法子 Noriko
-											Hidaka / 坂本千夏 Ch...<br>
-											1988&nbsp;/&nbsp;日本&nbsp;/&nbsp;动画 奇幻
-										</p>
-
-
-										<div class="star">
-											<span class="rating45-t"></span> <span class="rating_num"
-												property="v:average">9.1</span> <span property="v:best"
-												content="10.0"></span> <span>350077人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">人人心中都有个龙猫，童年就永远不会消失。</span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=1291560"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1291560-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=1291560"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1291560-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">17</em> <a
-										href="https://movie.douban.com/subject/1291841/"> <img
-										alt="教父"
-										src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p1910907404.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/1291841/" class="">
-											<span class="title">教父</span> <span class="title">&nbsp;/&nbsp;The
-												Godfather</span> <span class="other">&nbsp;/&nbsp;Mario
-												Puzo&#39;s The Godfather / 教父</span>
-										</a> <span class="playable">[可播放]</span>
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 弗朗西斯·福特·科波拉 Francis Ford Coppola&nbsp;&nbsp;&nbsp;主演:
-											马龙·白兰度 M...<br> 1972&nbsp;/&nbsp;美国&nbsp;/&nbsp;剧情 犯罪
-										</p>
-
-
-										<div class="star">
-											<span class="rating45-t"></span> <span class="rating_num"
-												property="v:average">9.2</span> <span property="v:best"
-												content="10.0"></span> <span>286625人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">千万不要记恨你的对手，这样会让你失去理智。</span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=1291841"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1291841-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=1291841"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1291841-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">18</em> <a
-										href="https://movie.douban.com/subject/1300267/"> <img
-										alt="乱世佳人"
-										src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p1963126880.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/1300267/" class="">
-											<span class="title">乱世佳人</span> <span class="title">&nbsp;/&nbsp;Gone
-												with the Wind</span> <span class="other">&nbsp;/&nbsp;飘</span>
-										</a> <span class="playable">[可播放]</span>
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: Victor Fleming / George Cukor&nbsp;&nbsp;&nbsp;主演: 克拉克·盖博
-											Clark Gable / ...<br> 1939&nbsp;/&nbsp;美国&nbsp;/&nbsp;剧情
-											爱情 战争
-										</p>
-
-
-										<div class="star">
-											<span class="rating5-t"></span> <span class="rating_num"
-												property="v:average">9.2</span> <span property="v:best"
-												content="10.0"></span> <span>229454人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">Tomorrow is another day.</span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=1300267"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1300267-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=1300267"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1300267-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">19</em> <a
-										href="https://movie.douban.com/subject/1291828/"> <img
-										alt="天堂电影院"
-										src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p1910901025.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/1291828/" class="">
-											<span class="title">天堂电影院</span> <span class="title">&nbsp;/&nbsp;Nuovo
-												Cinema Paradiso</span> <span class="other">&nbsp;/&nbsp;星光伴我心(台)
-												/ 新天堂乐园(港)</span>
-										</a>
-
-
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 朱塞佩·托纳多雷 Giuseppe Tornatore&nbsp;&nbsp;&nbsp;主演: 安东娜拉·塔莉
-											Antonel...<br> 1988&nbsp;/&nbsp;意大利 法国&nbsp;/&nbsp;剧情 爱情
-										</p>
-
-
-										<div class="star">
-											<span class="rating45-t"></span> <span class="rating_num"
-												property="v:average">9.1</span> <span property="v:best"
-												content="10.0"></span> <span>263699人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">那些吻戏，那些青春，都在影院的黑暗里被泪水冲刷得无比清晰。</span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=1291828"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1291828-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=1291828"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1291828-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">20</em> <a
-										href="https://movie.douban.com/subject/1849031/"> <img
-										alt="当幸福来敲门"
-										src="https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p1312700628.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/1849031/" class="">
-											<span class="title">当幸福来敲门</span> <span class="title">&nbsp;/&nbsp;The
-												Pursuit of Happyness</span> <span class="other">&nbsp;/&nbsp;寻找快乐的故事(港)
-												/ 追求快乐</span>
-										</a> <span class="playable">[可播放]</span>
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 加布里尔·穆奇诺 Gabriele Muccino&nbsp;&nbsp;&nbsp;主演: 威尔·史密斯
-											Will Smith ...<br> 2006&nbsp;/&nbsp;美国&nbsp;/&nbsp;剧情 传记
-											家庭
-										</p>
-
-
-										<div class="star">
-											<span class="rating45-t"></span> <span class="rating_num"
-												property="v:average">8.9</span> <span property="v:best"
-												content="10.0"></span> <span>457178人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">平民励志片。 </span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=1849031"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1849031-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=1849031"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1849031-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">21</em> <a
-										href="https://movie.douban.com/subject/1292000/"> <img
-										alt="搏击俱乐部"
-										src="https://img1.doubanio.com/view/movie_poster_cover/ipst/public/p1910926158.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/1292000/" class="">
-											<span class="title">搏击俱乐部</span> <span class="title">&nbsp;/&nbsp;Fight
-												Club</span> <span class="other">&nbsp;/&nbsp;搏击会(港) /
-												斗阵俱乐部(台)</span>
-										</a> <span class="playable">[可播放]</span>
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 大卫·芬奇 David Fincher&nbsp;&nbsp;&nbsp;主演: 爱德华·诺顿 Edward
-											Norton / 布拉...<br> 1999&nbsp;/&nbsp;美国 德国&nbsp;/&nbsp;剧情
-											动作 悬疑 惊悚
-										</p>
-
-
-										<div class="star">
-											<span class="rating45-t"></span> <span class="rating_num"
-												property="v:average">9.0</span> <span property="v:best"
-												content="10.0"></span> <span>357650人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">邪恶与平庸蛰伏于同一个母体，在特定的时间互相对峙。</span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=1292000"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1292000-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=1292000"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1292000-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">22</em> <a
-										href="https://movie.douban.com/subject/1292064/"> <img
-										alt="楚门的世界"
-										src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p480420695.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/1292064/" class="">
-											<span class="title">楚门的世界</span> <span class="title">&nbsp;/&nbsp;The
-												Truman Show</span> <span class="other">&nbsp;/&nbsp;真人Show(港)
-												/ 真人戏</span>
-										</a> <span class="playable">[可播放]</span>
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 彼得·威尔 Peter Weir&nbsp;&nbsp;&nbsp;主演: 金·凯瑞 Jim Carrey /
-											劳拉·琳妮 Lau...<br> 1998&nbsp;/&nbsp;美国&nbsp;/&nbsp;剧情
-										</p>
-
-
-										<div class="star">
-											<span class="rating45-t"></span> <span class="rating_num"
-												property="v:average">9.0</span> <span property="v:best"
-												content="10.0"></span> <span>360727人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">如果再也不能见到你，祝你早安，午安，晚安。</span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=1292064"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1292064-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=1292064"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1292064-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">23</em> <a
-										href="https://movie.douban.com/subject/6786002/"> <img
-										alt="触不可及"
-										src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p1454261925.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/6786002/" class="">
-											<span class="title">触不可及</span> <span class="title">&nbsp;/&nbsp;Intouchables</span>
-											<span class="other">&nbsp;/&nbsp;闪亮人生(港) / 逆转人生(台)</span>
-										</a>
-
-
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 奥利维·那卡什 Olivier Nakache / 艾力克·托兰达 Eric
-											Toledano&nbsp;&nbsp;&nbsp;主...<br>
-											2011&nbsp;/&nbsp;法国&nbsp;/&nbsp;剧情 喜剧
-										</p>
-
-
-										<div class="star">
-											<span class="rating45-t"></span> <span class="rating_num"
-												property="v:average">9.1</span> <span property="v:best"
-												content="10.0"></span> <span>299171人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">满满温情的高雅喜剧。</span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=6786002"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-6786002-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=6786002"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-6786002-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">24</em> <a
-										href="https://movie.douban.com/subject/1291552/"> <img
-										alt="指环王3：王者无敌"
-										src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p1910825503.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/1291552/" class="">
-											<span class="title">指环王3：王者无敌</span> <span class="title">&nbsp;/&nbsp;The
-												Lord of the Rings: The Return of the King</span> <span
-											class="other">&nbsp;/&nbsp;魔戒三部曲：王者再临 / 指环王III：王者无敌</span>
-										</a> <span class="playable">[可播放]</span>
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 彼得·杰克逊 Peter Jackson&nbsp;&nbsp;&nbsp;主演: 维果·莫腾森 Viggo
-											Mortensen / ...<br> 2003&nbsp;/&nbsp;美国
-											新西兰&nbsp;/&nbsp;剧情 动作 奇幻 冒险
-										</p>
-
-
-										<div class="star">
-											<span class="rating45-t"></span> <span class="rating_num"
-												property="v:average">9.1</span> <span property="v:best"
-												content="10.0"></span> <span>244255人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">史诗的终章。</span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=1291552"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1291552-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=1291552"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1291552-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="item">
-								<div class="pic">
-									<em class="">25</em> <a
-										href="https://movie.douban.com/subject/1293839/"> <img
-										alt="罗马假日"
-										src="https://img3.doubanio.com/view/movie_poster_cover/ipst/public/p2173398296.jpg"
-										class="">
-									</a>
-								</div>
-								<div class="info">
-									<div class="hd">
-										<a href="https://movie.douban.com/subject/1293839/" class="">
-											<span class="title">罗马假日</span> <span class="title">&nbsp;/&nbsp;Roman
-												Holiday</span> <span class="other">&nbsp;/&nbsp;金枝玉叶(港) /
-												罗马假期(台)</span>
-										</a>
-
-
-									</div>
-									<div class="bd">
-										<p class="">
-											导演: 威廉·惠勒 William Wyler&nbsp;&nbsp;&nbsp;主演: 奥黛丽·赫本 Audrey
-											Hepburn / 格...<br> 1953&nbsp;/&nbsp;美国&nbsp;/&nbsp;喜剧 剧情
-											爱情
-										</p>
-
-
-										<div class="star">
-											<span class="rating45-t"></span> <span class="rating_num"
-												property="v:average">8.9</span> <span property="v:best"
-												content="10.0"></span> <span>326369人评价</span>
-										</div>
-
-										<p class="quote">
-											<span class="inq">爱情哪怕只有一天。</span>
-										</p>
-
-
-										<p>
-
-											<span class="gact"> <a
-												href="https://movie.douban.com/wish/1598036/update?add=1293839"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1293839-wish" rel="nofollow">想看</a>
-											</span>&nbsp;&nbsp; <span class="gact"> <a
-												href="https://movie.douban.com/collection/1598036/update?add=1293839"
-												target="_blank" class="j a_collect_btn"
-												name="sbtn-1293839-collection" rel="nofollow">看过</a>
-											</span>&nbsp;&nbsp;
-										</p>
-
-									</div>
-								</div>
-							</div>
-						</li>
-					</ol>
-
-
-
-
-
-
-
-					<div class="paginator">
-						<span class="prev"> &lt;前页 </span> <span class="thispage">1</span>
-
-						<a href="?start=25&amp;filter=">2</a> <a
-							href="?start=50&amp;filter=">3</a> <a
-							href="?start=75&amp;filter=">4</a> <a
-							href="?start=100&amp;filter=">5</a> <a
-							href="?start=125&amp;filter=">6</a> <a
-							href="?start=150&amp;filter=">7</a> <a
-							href="?start=175&amp;filter=">8</a> <a
-							href="?start=200&amp;filter=">9</a> <a
-							href="?start=225&amp;filter=">10</a> <span class="next">
-							<link rel="next" href="?start=25&amp;filter=" /> <a
-							href="?start=25&amp;filter=">后页&gt;</a>
-						</span> <span class="count">(共250条)</span>
-					</div>
-
-
-
+	<div id="main">
+		<div class="col6">
+			<div class="box">
+				<div class="t">
+					您的位置：<a href="http://www.6vhao.com/index.html">首页</a>&nbsp;>&nbsp;<a
+						href="http://www.6vhao.com/dy/">2016最新电影</a> > 下载页面
 				</div>
-				<div class="aside">
+				<h1>2016动作奇幻《魔兽》720p.HD中英双字</h1>
 
-					<p class="pl">
-						豆瓣用户每天都在对“看过”的电影进行“很差”到“力荐”的评价，豆瓣根据每部影片看过的人数以及该影片所得的评价等综合数据，通过算法分析产生豆瓣电影250。
+				<div id="endText">
+					<div class="fl">
+						<script type="text/javascript"
+							src="http://www.6vhao.com/d/gg3001.js"></script>
+					</div>
+					<div class="fr">
+						<script type="text/javascript"
+							src="http://www.6vhao.com/d/js/acmsd/thea3.js"></script>
+					</div>
+					<div class="cr"></div>
+					<br /> <strong><a
+						href="http://www.6vhao.com/dy/2016-06-18/27366.html">2016动作奇幻《魔兽》720p.HD中英双字</a>
+						- 内容介绍：</strong>
+					<p>
+						<img alt=""
+							src="http://ww2.sinaimg.cn/mw690/b344ac01jw1f4ow1jon51j20hr0p00wc.jpg" />
 					</p>
-					<div id="dale_movie_top250_bottom_right"></div>
-
-					<!-- douban ad begin -->
-
-
-
-
-
-
-					<div class="mobile-app-entrance block5 app-movie">
-						<a class="entrance-link"
-							href="https://www.douban.com/doubanapp/frodo">
-							<div class="entrance-qrcode">
-								<img
-									src="https://img3.doubanio.com/f/movie/a02f6ed325fc52e220f299d51e730c422e2bcd16/pics/movie/douban_app_ad/qrcode.png"
-									alt="扫码下载豆瓣 App" width="80" height="80" />
-							</div>
-							<div class="entrance-info">
-								<span class="app-icon icon-movie"></span> <span
-									class="main-title">豆瓣</span> <span class="sub-title">让好电影来找你</span>
-							</div>
-						</a>
+					<p>
+						◎译 名 魔兽/魔兽：崛起(台)/魔兽争霸：战雄崛起(港)/魔兽争霸/魔兽世界<br /> ◎片 名 Warcraft<br />
+						◎年 代 2016<br /> ◎国 家 <a
+							href="http://www.6vhao.com/s/hanguodianying/" target="_blank"
+							title="美国电影">美国</a>/<a
+							href="http://www.6vhao.com/s/guochandianying/" target="_blank"
+							title="国产电影">中国</a>大陆/加拿大<br /> ◎类 别 <a
+							href="http://www.6vhao.com/e/search/result/?searchid=283696"
+							target="_blank" title="动作片">动作</a>/<a
+							href="http://www.6vhao.com/e/search/result/?searchid=282794"
+							target="_blank" title="奇幻片">奇幻</a>/<a
+							href="http://www.6vhao.com/e/search/result/?searchid=281914"
+							target="_blank" title="冒险片">冒险</a><br /> ◎语 言 英语<br /> ◎字 幕 中字<br />
+						◎上映日期 2016-06-10(<a href="http://www.6vhao.com/s/hanguodianying/"
+							target="_blank" title="美国电影">美国</a>)/2016-06-08(<a
+							href="http://www.6vhao.com/s/guochandianying/" target="_blank"
+							title="国产电影">中国</a>大陆)<br /> ◎IMDb评分 7.6/10 69,742 users<br />
+						◎豆瓣评分 8.0/10 99347人评价<br /> ◎片 长 124分钟<br /> ◎导 演 邓肯&middot;琼斯
+						Duncan Jones<br /> ◎主 演 崔维斯&middot;费米尔 Travis Fimmel<br />
+						托比&middot;凯贝尔 Toby Kebbell<br /> 宝拉&middot;巴顿 Paula Patton<br />
+						吴彦祖 Daniel Wu<br /> 本&middot;福斯特 Ben Foster<br /> 多米尼克&middot;库珀
+						Dominic Cooper<br /> 鲁丝&middot;内伽 Ruth Negga<br /> 克兰西&middot;布朗
+						Clancy Brown<br /> 丹尼尔&middot;库德摩尔 Daniel Cudmore<br />
+						罗伯特&middot;卡辛斯基 Robert Kazinsky<br /> 本&middot;施耐泽 Ben Schnetzer<br />
+						考乐姆&middot;吉斯&middot;雷尼 Callum Keith Rennie<br /> 泰瑞&middot;诺塔里
+						Terry Notary<br /> 瑞安&middot;罗宾斯 Ryan Robbins<br />
+						博尔克利&middot;杜菲尔德 Burkely Duffield<br /> 丹&middot;佩恩 Dan Payne<br />
+						迪伦&middot;肖明 Dylan Schombing<br /> 唐尼&middot;麦克尼尔 Donnie MacNeil<br />
+						迈克&middot;安东纳科斯 Mike Antonakos<br /> 拉吉&middot;拉尔 Raj Lal
+					</p>
+					<p>◎简 介</p>
+					<p>
+						艾泽拉斯与德拉诺本是两颗祥和安宁的星球，人类在艾泽拉斯大陆上世代繁衍生息，兽人则在德拉诺的土地上辛勤耕耘。直到兽人古尔丹（吴彦祖
+						饰）的出现，打破了两个星球的和平。邪恶的古尔丹为了一己私利，使用恶魔能量打开了一扇传送门&mdash;&mdash;黑暗之门，并残忍的破坏兽人的家园，将原本爱好和平的兽人变成一个个野蛮残暴的战士，迫使他们穿过黑暗之门到达人类的领地作恶。霜狼氏族的酋长杜隆坦（托比&middot;凯贝尔
+						Toby Kebbell
+						饰）虽然发现了古尔丹的阴谋却为时已晚，不得不带领着自己的族人离开支离破碎的德拉诺，在举步维艰的艾泽拉斯大陆上寻找着庇护所。面临家园危机的人类在领袖洛萨（崔维斯&middot;费米尔
+						Travis Fimmel 饰）的带领下一边痛击着野蛮的入侵者，一边苦苦寻求着<a
+							href="http://www.6vhao.com/e/search/result/?searchid=283129"
+							target="_blank" title="战争片">战争</a>之外的解救方法。两个种族面临着同样的危机，他们能够顺利的渡过这场灾难吗？
+					</p>
+					<p>
+						<img alt="" width="600" height="337"
+							src="http://i1.piimg.com/507682/82e74b28f32f4550.jpg" />
+					</p>
+					<p>
+						<img alt="" width="600" height="337"
+							src="http://i1.piimg.com/507682/bf287a3613d0f1eb.jpg" />
+					</p>
+					<p>
+						<img alt="" width="600" height="337"
+							src="http://i1.piimg.com/507682/05b6c7a810ab6945.jpg" />
+					</p>
+					<p>
+						<img alt="" width="600" height="337"
+							src="http://i1.piimg.com/507682/2cabe5e112575401.jpg" />
+					</p>
+					<p>
+						<img alt="" width="600" height="337"
+							src="http://i1.piimg.com/507682/5e56ee53d58dbb38.jpg" />
+					</p>
+					<p>
+						<img alt="" src="http://i4.piimg.com/2251/197d7e1c5b885228s.png" /><br />
+						<img alt="" src="http://i4.piimg.com/2251/65ecab02ec58b0efs.png" /><br />
+						<img alt="" src="http://i4.piimg.com/2251/0fff5d28821e899cs.png" /><br />
+						<img alt="" src="http://i4.piimg.com/2251/b8504e5bc453b42as.png" /><br />
+						<img alt="" src="http://i4.piimg.com/2251/cb4e36111b52ee1es.png" /><br />
+						<img alt="" src="http://i4.piimg.com/2251/d99d91199e03fab7s.png" /><br />
+						<img alt="" src="http://i4.piimg.com/2251/0036d98a0b022f4cs.png" /><br />
+						<img alt="" src="http://i4.piimg.com/2251/8efe4c8499c7bc2es.png" /><br />
+						<img alt="" src="http://i4.piimg.com/2251/3da23e6e8deb26c6s.png" />
+					</p>
+					<p>
+						<hr />
+					</p>
+					<p>
+						<strong><span style="font-size: large"><span
+								style="color: #ff0000">【下载地址】</span></span></strong>
+					</p>
+					<p>
+						<table cellspacing="1" cellpadding="10" width="100%"
+							bgcolor="#0099cc" border="0">
+							<tbody>
+								<tr>
+									<td bgcolor="#ffffbb" width="100%"
+										style="word-break: break-all; line-height: 18px"><a
+										href="ed2k://|file|%E9%AD%94%E5%85%BD.%E9%9F%A9%E7%89%88.HD1280%E8%B6%85%E6%B8%85%E4%B8%AD%E8%8B%B1%E5%8F%8C%E5%AD%97.mp4|2724866096|737520BECBD0BB60ADC5AF1702EF2CC7|h=MJYYOKHVPFZTHPAVBYMUQCJC2FT25VAC|/">魔兽(韩版).720p.HD中英双字.mp4</a></td>
+								</tr>
+								<tr>
+									<td bgcolor="#ffffbb" width="100%"
+										style="word-break: break-all; line-height: 18px">网盘：<a
+										target="_blank" href="http://pan.baidu.com/s/1jH9rPII">http://pan.baidu.com/s/1jH9rPII</a>
+										密码：3h6r
+									</td>
+								</tr>
+								<tr>
+									<td bgcolor="#ffffbb" width="100%"
+										style="word-break: break-all; line-height: 18px"><a
+										href="ed2k://|file|%E9%AD%94%E5%85%BD(%E9%9F%A9%E7%89%88).720p.HD%E4%B8%AD%E8%8B%B1%E5%8F%8C%E5%AD%97[www.66ys.tv].mp4|2044254966|CC02D8907F97AED4828D8A4C14C7AC25|h=HLZZ6CN5SSWUZ4M6QDI3PTLPVR3SLIQO|/">魔兽(韩版).720p.HD中英双字.mkv</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</p>
+					<div align="center">
+						<div class="fl">
+							<script type="text/javascript"
+								src="http://www.6vhao.com/d/gg3002.js"></script>
+						</div>
+						<div class="fr">
+							<script type="text/javascript" src="http://www.6vhao.com/d/f6.js"></script>
+						</div>
+						<div class="cr"></div>
 					</div>
-
-					<!-- douban ad end -->
-
-
+					<div class="tps">
+						上一篇 <br> <a
+							href="http://www.6vhao.com/dy/2016-06-18/BJYSXYTZBRQS.html"
+							rel="prev" target="_blank">2016爱情喜剧《北京遇上西雅图之不二情书》720p.HD国语中字</a>
+						<br> 下一篇 <br> <a
+							href="http://www.6vhao.com/dy/2016-06-19/FanJi.html" rel="next"
+							target="_blank">2015惊悚剧情《反击》720p.HD中英双字</a>
+					</div>
+					<div class="tps">
+						<strong> 2016动作奇幻《魔兽》720p.HD中英双字 下载帮助： </strong> <br />
+						1.下载时如提醒需要升级迅雷7，点击取消便可继续正常下载，也可以使用右键迅雷下载。 <br />
+						2.下载后如文件后缀非.rmvb格式，修改后缀为.rmvb便可正常播放。 <br />
+						3.如左键点击无法下载，你可以使用右键迅雷下载，或者复制下载连接到迅雷软件新建任务下载。 <br /> <strong>
+							本站所有电影完全免费，必须用迅雷下载，下载的人越多下载速度越快，把资源分享给您的朋友可以大大提高下载速度。</strong> <br />
+					</div>
+					<div class="downtps">
+						<strong>2016动作奇幻《魔兽》720p.HD中英双字网友评论：</strong>
+					</div>
 				</div>
-				<div class="extra"></div>
+				<iframe name="ifc" id="ifc" src="/e/pl/?classid=32&id=27366"
+					width="100%" marginheight="0" border="0" frameborder="0"
+					scrolling="no" height="0"
+					onload="this.height=0;var fdh=(this.Document?this.Document.body.scrollHeight:this.contentDocument.body.offsetHeight);this.height=(fdh>150?fdh:150)"></iframe>
+				<div class="downtps dp"></div>
+				<div class="cr"></div>
 			</div>
 		</div>
-
-
-
+		<div class="col1">
+			<div class="box mt6">
+				<h3>热门电影电视剧</h3>
+				<ul class="lt">
+					<li><a
+						href="http://www.6vhao.com/mj/2015-04-12/BYHZGQLDYX.html"
+						target="_blank"><font color='#FF0000'>美剧《冰与火之歌：权力的游戏》</font></a></li>
+					<li><a href="http://www.6vhao.com/mj/2015-03-02/24886.html"
+						target="_blank"><font color='#FF0000'>美剧《行尸走肉》第六季全</font></a></li>
+					<li><a href="http://www.6vhao.com/mj/2011-10-17/16397.html"
+						target="_blank"><font color='#FF0000'>美剧《行尸走肉》第1-4季全</font></a></li>
+					<li><a href="http://www.6vhao.com/mj/2013-04-01/20273.html"
+						target="_blank"><font color='#FF0000'>美剧《冰与火之歌》第四季全</font></a></li>
+					<li><a href="http://www.6vhao.com/mj/2013-01-26/19814.html"
+						target="_blank"><font color='#FF0000'>美剧《斯巴达克斯：诅咒者之战》</font></a></li>
+					<li><a
+						href="http://www.6vhao.com/dy/2016-04-27/PFXDZCRZYLM.html"
+						target="_blank"><font color='#FF0000'>《蝙蝠侠大战超人：正义黎明》72</font></a></li>
+					<li><a href="http://www.6vhao.com/mj/2013-09-25/21456.html"
+						target="_blank"><font color='#FF0000'>美剧《神盾局特工》第三季全</font></a></li>
+					<li><a href="http://www.6vhao.com/dy/2015-01-01/24583.html"
+						target="_blank"><font color='#FF0000'>2014科幻大片《星际穿越》720p.国</font></a></li>
+					<li><a
+						href="http://www.6vhao.com/dy/2015-06-06/FCDMKSKBZL.html"
+						target="_blank"><font color='#FF0000'>2015高分动作《疯狂的麦克斯：狂</font></a></li>
+					<li><a href="http://www.6vhao.com/dy/2015-10-16/XLTFN.html"
+						target="_blank"><font color='#FF0000'>2015高分喜剧《夏洛特烦恼》720p</font></a></li>
+					<li><a href="http://www.6vhao.com/dy/2014-06-16/23353.html"
+						target="_blank"><font color='#FF0000'>2014最新科幻动作大片《明日边缘</font></a></li>
+					<li><a href="http://www.6vhao.com/gq/2013-07-19/20957.html"
+						target="_blank"><font color='#FF0000'>2013动作科幻《环太平洋》720p.国</font></a></li>
+					<li><a
+						href="http://www.6vhao.com/dy/2015-07-15/DaoShiXiaShan.html"
+						target="_blank"><font color='#FF0000'>2015动作喜剧《道士下山》720p.B</font></a></li>
+					<li><a href="http://www.6vhao.com/dy/2014-07-03/23481.html"
+						target="_blank"><font color='#FF0000'>2014科幻大片《变形金刚4》IMAX版</font></a></li>
+					<li><a href="http://www.6vhao.com/dy/2013-06-22/20764.html"
+						target="_blank"><font color='#FF0000'>经典科幻大片合集</font></a></li>
+					<li><a href="http://www.6vhao.com/gq/2013-07-03/20845.html"
+						target="_blank"><font color='#FF0000'>经典动作恐怖《僵尸世界大战》72</font></a></li>
+					<li><a
+						href="http://www.6vhao.com/dy/2015-09-12/ZhuoYaoJi.html"
+						target="_blank"><font color='#FF0000'>2015奇幻喜剧《捉妖记》720p.HD国</font></a></li>
+					<li><a href="http://www.6vhao.com/gq/2013-09-06/21327.html"
+						target="_blank"><font color='#FF0000'>2013科幻大片《极乐空间》720p.国</font></a></li>
+					<li><a href="http://www.6vhao.com/gq/2013-10-12/21561.html"
+						target="_blank"><font color='#FF0000'>郭美美2013最新《海天盛宴·韦口</font></a></li>
+					<li><a href="http://www.6vhao.com/dy/2015-01-05/24599.html"
+						target="_blank"><font color='#FF0000'>姜文2014喜剧《一步之遥》720p.H</font></a></li>
+				</ul>
+			</div>
+			<!--/box-->
+			<div class="box">
+				<h3>最新电影下载</h3>
+				<ul class="lt">
+					<li><a
+						href="http://www.6vhao.com/jddy/2016-07-11/WXNHHNN.html"
+						target="_blank">韩国动画《卫星女孩和奶牛》720p</a></li>
+					<li><a href="http://www.6vhao.com/dy/2016-06-18/27366.html"
+						target="_blank">2016动作奇幻《魔兽》720p.HD中英</a></li>
+					<li><a href="http://www.6vhao.com/dy/2016-07-10/HeiBai.html"
+						target="_blank">2016动作剧情《黑白》720p.BD中字</a></li>
+					<li><a
+						href="http://www.6vhao.com/gq/2016-07-11/JieMeiQingShen.html"
+						target="_blank">经典历史剧情《姐妹情深》720p.B</a></li>
+					<li><a href="http://www.6vhao.com/gq/2009-05-28/7281.html"
+						target="_blank">经典科幻《星际迷航6》720p.国英</a></li>
+					<li><a href="http://www.6vhao.com/gq/2009-05-28/7282.html"
+						target="_blank">经典科幻《星际迷航5》720p.国英</a></li>
+					<li><a href="http://www.6vhao.com/gq/2009-05-26/7258.html"
+						target="_blank">经典科幻《星际迷航4》720p.国英</a></li>
+					<li><a href="http://www.6vhao.com/gq/2009-05-26/7257.html"
+						target="_blank">经典科幻《星际迷航3》720p.国英</a></li>
+					<li><a href="http://www.6vhao.com/gq/2009-05-21/7181.html"
+						target="_blank">经典科幻《星际迷航2》720p.国英</a></li>
+					<li><a href="http://www.6vhao.com/gq/2009-05-21/7180.html"
+						target="_blank">经典科幻《星际迷航1》720p.国英</a></li>
+					<li><a
+						href="http://www.6vhao.com/dy/2016-07-10/MeiYouMiMi.html"
+						target="_blank">韩国2016惊悚剧情《没有秘密》10</a></li>
+					<li><a
+						href="http://www.6vhao.com/dy/2016-07-10/JueShiLingHun.html"
+						target="_blank">2015音乐传记《爵士灵魂》720p.B</a></li>
+					<li><a
+						href="http://www.6vhao.com/dy/2016-07-10/GaoLouDaSha.html"
+						target="_blank">2015爱情喜剧《高楼大厦》720p.B</a></li>
+					<li><a
+						href="http://www.6vhao.com/jddy/2016-07-10/TWZDXJCBMX.html"
+						target="_blank">2016动画《头文字D新剧场版：梦现</a></li>
+					<li><a href="http://www.6vhao.com/gq/2016-07-10/RSDYD.html"
+						target="_blank">2016剧情《人生的约定》720p.BD中</a></li>
+					<li><a href="http://www.6vhao.com/gq/2012-12-18/19550.html"
+						target="_blank">经典动作《汉密尔顿2：绑票危机》</a></li>
+					<li><a href="http://www.6vhao.com/gq/2013-10-13/21565.html"
+						target="_blank">韩国爱情剧情《只有你》720p.BD中</a></li>
+					<li><a
+						href="http://www.6vhao.com/gq/2016-07-10/LangZaiYuanFang.html"
+						target="_blank">经典剧情《郎在远方》720p.BD中字</a></li>
+					<li><a
+						href="http://www.6vhao.com/dy/2016-07-10/FengKuangFenSi.html"
+						target="_blank">印度2016剧情《疯狂粉丝》BD中字</a></li>
+					<li><a
+						href="http://www.6vhao.com/gq/2016-07-10/HongFenJinGang.html"
+						target="_blank">日本动作剧情《红粉金刚》720p.B</a></li>
+					<li><a href="http://www.6vhao.com/gq/2012-05-13/18044.html"
+						target="_blank">经典动作惊悚《汉密尔顿：国家利</a></li>
+					<li><a href="http://www.6vhao.com/gq/2008-10-15/3689.html"
+						target="_blank">IMDB经典TOP001《肖申克的救赎》</a></li>
+					<li><a href="http://www.6vhao.com/dy/2016-07-09/Dong.html"
+						target="_blank">2015剧情《冬/七天》1080p.HD国语</a></li>
+					<li><a href="http://www.6vhao.com/gq/2009-08-22/8142.html"
+						target="_blank">IMDB经典TOP076《勇敢的心》720P</a></li>
+					<li><a href="http://www.6vhao.com/dy/2016-05-09/XBYQS2.html"
+						target="_blank">2015爱情喜剧《西班牙情事2》720</a></li>
+				</ul>
+			</div>
+			<!--/box-->
+			<div class="box mt6">
+				<h3>最新电视剧下载</h3>
+				<ul class="lt">
+					<li><a href="http://www.6vhao.com/mj/2016-05-23/27246.html"
+						target="_blank">美剧《传教士》第一季[更新高清0</a></li>
+					<li><a href="http://www.6vhao.com/mj/2013-06-20/20753.html"
+						target="_blank">美剧《清道夫》第四季[更新高清0</a></li>
+					<li><a href="http://www.6vhao.com/dlz/2016-07-11/27491.html"
+						target="_blank">《电视剧版致青春》更新第02集</a></li>
+					<li><a href="http://www.6vhao.com/mj/2012-10-12/19118.html"
+						target="_blank">美剧《美女与野兽/侠胆雄狮》第四</a></li>
+					<li><a href="http://www.6vhao.com/mj/2014-06-23/23401.html"
+						target="_blank">美剧《末日孤舰》第三季[更新高清</a></li>
+					<li><a href="http://www.6vhao.com/mj/2016-06-24/27398.html"
+						target="_blank">美剧《无间菜鸟》第一季全</a></li>
+					<li><a href="http://www.6vhao.com/rj/2016-05-02/27152.html"
+						target="_blank">韩剧《狱中花》更新第21集</a></li>
+					<li><a href="http://www.6vhao.com/rj/2016-05-15/27217.html"
+						target="_blank">韩剧《美女孔心》更新第18集</a></li>
+					<li><a href="http://www.6vhao.com/rj/2016-03-13/26941.html"
+						target="_blank">韩剧《家和万事成》更新第40集</a></li>
+					<li><a href="http://www.6vhao.com/rj/2016-02-22/26867.html"
+						target="_blank">韩剧《五个孩子》更新第42集</a></li>
+					<li><a href="http://www.6vhao.com/rj/2016-02-17/26850.html"
+						target="_blank">韩剧《对，就是那样》更新第44集</a></li>
+					<li><a href="http://www.6vhao.com/mj/2014-08-03/GZCCQ.html"
+						target="_blank">美剧《古战场传奇》第二季[更新高</a></li>
+					<li><a href="http://www.6vhao.com/rj/2016-07-04/27454.html"
+						target="_blank">日剧《忧郁的物怪庵》更新第02集</a></li>
+					<li><a href="http://www.6vhao.com/rj/2016-07-10/27487.html"
+						target="_blank">日剧《穿越时空的少女》更新第01</a></li>
+					<li><a href="http://www.6vhao.com/rj/2016-07-10/27486.html"
+						target="_blank">日剧《拥有神之舌的男人》更新第</a></li>
+					<li><a href="http://www.6vhao.com/mj/2014-07-03/23480.html"
+						target="_blank">美剧动画《七个小矮人》第二季[更</a></li>
+					<li><a href="http://www.6vhao.com/mj/2011-11-08/16598.html"
+						target="_blank">美剧《地狱之轮》第五季[更新高清</a></li>
+					<li><a href="http://www.6vhao.com/rj/2016-06-05/27323.html"
+						target="_blank">日剧《早晨终将来临》更新第06集</a></li>
+					<li><a href="http://www.6vhao.com/rj/2016-07-03/27449.html"
+						target="_blank">日剧《Rewrite》更新第02集</a></li>
+					<li><a href="http://www.6vhao.com/rj/2016-05-14/27207.html"
+						target="_blank">韩剧《魔女宝鉴》更新第18集</a></li>
+					<li><a href="http://www.6vhao.com/mj/2015-06-25/25551.html"
+						target="_blank">真人秀《机器人大战》第二季[更新</a></li>
+					<li><a href="http://www.6vhao.com/mj/2014-12-13/24491.html"
+						target="_blank"><font color='#FF0000'>美剧《马可波罗》第二季全</font></a></li>
+					<li><a href="http://www.6vhao.com/rj/2016-07-09/27477.html"
+						target="_blank">日剧《声恋》更新第01集</a></li>
+					<li><a href="http://www.6vhao.com/rj/27373.html"
+						target="_blank">韩剧《38师机动队》第07集</a></li>
+					<li><a href="http://www.6vhao.com/mj/2015-06-20/25528.html"
+						target="_blank">美剧《扫兴者》第二季[更新高清0</a></li>
+				</ul>
+			</div>
+			<!--/box-->
+			<div class="box mt6">
+				<h3>最新综艺游戏下载</h3>
+				<ul class="lt">
+					<li><a href="http://www.6vhao.com/zy/2016-06-19/27368.html"
+						target="_blank"><font color='#FF0000'>2016法国欧洲杯合集</font></a></li>
+					<li><a href="http://www.6vhao.com/zy/2016-06-05/27319.html"
+						target="_blank">《Come On许志安演唱会2015》BD粤</a></li>
+					<li><a
+						href="http://www.6vhao.com/zy/2016-05-29/2016MGGGPYYDJ.html"
+						target="_blank">2016美国公告牌音乐大奖</a></li>
+					<li><a href="http://www.6vhao.com/zy/2016-03-27/27009.html"
+						target="_blank">历届奥斯卡最佳影片合集</a></li>
+					<li><a
+						href="http://www.6vhao.com/zy/2016-05-20/2016OZGCBS.html"
+						target="_blank">《2016年欧洲歌唱大赛》HD中字10</a></li>
+					<li><a
+						href="http://www.6vhao.com/zy/2016-05-11/ZJLMTLSJXHYCH.html"
+						target="_blank">周杰伦：魔天伦世界巡回演唱会</a></li>
+					<li><a href="http://www.6vhao.com/zy/2016-05-11/ZJLSJYCH.html"
+						target="_blank">张杰洛杉矶演唱会</a></li>
+					<li><a href="http://www.6vhao.com/zy/2016-05-06/27173.html"
+						target="_blank">《英皇娱乐15周年群星演唱会》72</a></li>
+					<li><a href="http://www.6vhao.com/zy/2016-04-13/27084.html"
+						target="_blank">2016岳云鹏“岳来越好”天津专场</a></li>
+					<li><a href="http://www.6vhao.com/zy/2016-04-20/27110.html"
+						target="_blank">德云社20周年庆典</a></li>
+				</ul>
+			</div>
+			<!--/box-->
+		</div>
 	</div>
+	<!--/box-->
+	</div>
+	</div>
+	<div id="a960">
+		<script src="/d/960.js"></script>
+	</div>
+	<div id="a9602">
+		<script src=/d/f5.js></script>
+	</div>
+	<div id="footer">
+		<p class="t">
+			<a href="/index.html">网站留言</a> - <a href="/index.html">关于我们</a> - <a
+				href="/index.html">广告业务</a> - <a href="/index.html">信息反馈</a> - <a
+				href="/index.html">合作伙伴</a> - <a href="/index.html">网站地图</a>
+		</p>
+		<p>
+			Copyright &copy; 2009 <a href="http://www.6vhao.com"><b><font
+					color=red>6VHAO</font>.COM</b></a> 版权所有<br /> 渝ICP备09051310号
+	</div>
+	<span class="hidden"><script src=/d/tj.js></script></span>
 
-	<!-- nain9-docker-->
-
-	<script>_SPLITTEST=''</script>
+	<script
+		src="http://www.6vhao.com/e/public/onclick/?enews=donews&classid=32&id=27366"></script>
 </body>
-
 </html>
-

@@ -34,21 +34,21 @@
     
     <div class="row">
       <div class="span4">
-        <h5><small><a href="${ctx}/list-2${urlSuffix}" class="pull-right">更多<i class="icon-forward"></i></a></small>&nbsp;<i class="icon-film"></i>&nbsp;&nbsp;最新电影</h5>
+        <h5><small><a href="${ctx}/list-2${urlSuffix}" class="pull-right">更多<i class="icon-forward"></i></a></small>&nbsp;<i class="icon-film"></i>&nbsp;&nbsp;最新电影<font size="1" color="red">(红色为推荐)</font></h5>
 		<ul><c:forEach items="${fnc:getArticleList(site.id, 2, 30, '')}" var="article">
-			<li><span class="pull-right"><fmt:formatDate value="${article.updateDate}" pattern="yyyy-MM-dd"/></span><a href="${article.url}" style="color:${article.color}" title="${article.title }"  target=_blank>${fns:abbr(article.title,26)}</a></li>
+			<li><span class="pull-right"><fmt:formatDate value="${article.updateDate}" pattern="MM-dd"/></span><a href="${article.url}" style="color:${article.color}" title="${article.title }"  target=_blank>${fns:abbr(article.title,30)}</a></li>
 		</c:forEach></ul>
       </div>
       <div class="span4">
         <h5><small><a href="${ctx}/list-3${urlSuffix}" class="pull-right">更多<i class="icon-forward"></i></a></small>&nbsp;<i class="icon-play-circle"></i>&nbsp;&nbsp;最新连续剧</h5>
 		<ul><c:forEach items="${fnc:getArticleList(site.id, 3, 30, '')}" var="article">
-			<li><span class="pull-right"><fmt:formatDate value="${article.updateDate}" pattern="yyyy-MM-dd"/></span><a href="${article.url}" style="color:${article.color}" title="${article.title }"  target=_blank>${fns:abbr(article.title,26)}</a></li>
+			<li><span class="pull-right"><fmt:formatDate value="${article.updateDate}" pattern="MM-dd"/></span><a href="${article.url}" style="color:${article.color}" title="${article.title }"  target=_blank>${fns:abbr(article.title,30)}</a></li>
 		</c:forEach></ul>
       </div>
       <div class="span4">
         <h5><small><a href="${ctx}/list-5${urlSuffix}" class="pull-right">更多<i class="icon-forward"></i></a></small>&nbsp;<i class="icon-lock"></i>&nbsp;&nbsp;看电影涨姿势</h5>
 		<ul><c:forEach items="${fnc:getArticleList(site.id, 5, 30, '')}" var="article">
-			<li><span class="pull-right"><fmt:formatDate value="${article.updateDate}" pattern="yyyy-MM-dd"/></span><a href="${article.url}" style="color:${article.color}" title="${article.title }"  target=_blank>${fns:abbr(article.title,26)}</a></li>
+			<li><span class="pull-right"><fmt:formatDate value="${article.updateDate}" pattern="MM-dd"/></span><a href="${article.url}" style="color:${article.color}" title="${article.title }"  target=_blank>${fns:abbr(article.title,30)}</a></li>
 		</c:forEach></ul>
       </div>
     </div>
