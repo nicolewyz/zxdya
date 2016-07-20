@@ -20,7 +20,7 @@ public class YgdyDaoImpl implements YgdyDao{
     public int saveArticle(YgdyArticle article, String type) {
         DBHelper dbhelper = new DBHelper();
         StringBuffer sql = new StringBuffer();
-        sql.append("INSERT INTO cms_yg_" + type + " ( `domain`,`category`,`name`,`content`,`url`,`publishDate`)")
+        sql.append("INSERT INTO cms_resouce_" + type + " ( `domain`,`category`,`name`,`content`,`url`,`publishDate`)")
         //`key`,`name`,identity,location,profession,sex,school,major,recommend,picUrl,agree,thanks,ask,answer,article,collection
         .append("VALUES (? , ? , ? , ? , ?, ? ) ");
         //设置 sql values 的值
@@ -45,7 +45,7 @@ public class YgdyDaoImpl implements YgdyDao{
 		
 		//默认值
 		if("".equals(tablePre)){
-			tablePre = "cms_yg_";
+			tablePre = "cms_resouce_";
 		}
 		
 		DBHelper dbhelper = new DBHelper();

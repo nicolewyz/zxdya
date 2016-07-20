@@ -24,7 +24,7 @@ import us.codecraft.webmagic.scheduler.component.BloomFilterDuplicateRemover;
  * @author antgan
  * 
  */
-public class SixvhaoPageProcessor implements PageProcessor{
+public class SixvhaoIndexProcessor implements PageProcessor{
     //抓取网站的相关配置，包括：编码、抓取间隔、重试次数等
     private Site site = Site.me().setCharset("gb2312").setRetryTimes(10).setTimeOut(10000).setSleepTime(1000);
     //爬虫电影数量
@@ -59,9 +59,6 @@ public class SixvhaoPageProcessor implements PageProcessor{
             /*从下载到的用户详细页面中抽取想要的信息，这里使用xpath居多*/
             /*为了方便理解，抽取到的信息先用变量存储，下面再赋值给对象*/
             String dyName = page.getHtml().xpath("//div[@id='main']//div[@class='box']//h1/text()").get();
-            if(dyName.equals("2016法国欧洲杯合集")){
-            	System.out.println("===");
-            }
 //            String content1 = page.getHtml().xpath("//div[@id='main']//div[@id='endText']/p[1]/html()").get();
 //            String content2 = page.getHtml().xpath("//div[@id='main']//div[@id='endText']/p[2]/tidyText()").get();
 //            String content3 = page.getHtml().xpath("//div[@id='main']//div[@id='endText']/p[3]/text()").get();
@@ -113,6 +110,7 @@ public class SixvhaoPageProcessor implements PageProcessor{
             //ed2k://|file|%E9%AD%94%E5%85%BD(%E9%9F%A9%E7%89%88).720p.HD%E4%B8%AD%E8%8B%B1%E5%8F%8C%E5%AD%97[www.66ys.tv].mp4|2044254966|CC02D8907F97AED4828D8A4C14C7AC25|h=HLZZ6CN5SSWUZ4M6QDI3PTLPVR3SLIQO|/
             //ed2k://|file|忍者神龟：变种时代.BD1280超清国英双语中英双字.mp4|2577949605|CE6016500409BF19D8765C274CAF91E8|h=PCVMYCDL2EVKMJVMEZT5OFJLI2R2WE3N|/
             //magnet:?xt=urn:btih:8164e3b08c75c2b24fddbe9dec87ef4b0b4eae52&dn=%5B%E6%B5%B7%E6%B4%8B%E6%B7%B1%E5%A4%84%5D.In.The.Heart.Of.The.Sea.2015.3D.BluRay.1080p.HSBS.x264.TrueHD7.1-CMCT&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=http%3A%2F%2Ftracker.cmct.cc%3A2710%2Fannounce
+            //magnet:?xt=urn:btih:c677241fb37c1c906ac44bae6eb4f4217368b88a&amp;dn=Point.Break.2015.1080p.3D.BluRay.Half-SBS.x264.DTS-HD.MA.7.1-RARBG&amp;tr=http%3A%2F%2Ftracker.trackerfix.com%3A80%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.me%3A2710%2Fannounce&amp;tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce
             //thunder://QUFodHRwOi8vYnQuMnR1LmNjLzQ5QjM4MzQ5QzI4NTM4NDQzNDEyOEM4NzVDOTFBNjAyNzU3QzlDQkUvyaW80tauxa4uQkQxMjgws6zH5dbQ06LLq9fWLm1wNFpa
             
             Pattern patt= Pattern.compile("(ed2k://[\\|\\w\\(\\)\\.\\%\\[\\]\\/\\=\u4E00-\u9FA5\\:\\：]+)|(thunder://[\\|\\w\\(\\)\\.\\%\\[\\]\\/\\=\u4E00-\u9FA5\\:\\：]+)|(magnet:\\?[\\|\\w\\(\\)\\.\\?\\&\\%\\[\\]\\/\\=\u4E00-\u9FA5\\:\\：\\-\\;]+)",Pattern.DOTALL);
@@ -195,34 +193,16 @@ public class SixvhaoPageProcessor implements PageProcessor{
         System.out.println("========6v电影信息小爬虫【启动】喽！=========");
         startTime = new Date().getTime();
         //入口为：【https://www.zhihu.com/search?type=people&q=xxx 】，其中xxx 是搜索关键词
-        Spider.create(new SixvhaoPageProcessor()).addUrl(
-        		"http://www.6vhao.com/dy/index.html",	//最新
-        		"http://www.6vhao.com/gq/index.html",	//高清
-        		"http://www.6vhao.com/3D/index.html",	//3D
-        		"http://www.6vhao.com/dlz/index.html",	//国产剧.港台剧连载
-        		"http://www.6vhao.com/rj/index.html",	//日韩剧
-        		"http://www.6vhao.com/mj/index.html",	//欧美剧
-        		"http://www.6vhao.com/zy/index.html",	//综艺
-        		"http://www.6vhao.com/jddy/index.html",	//动画电影
-        		"http://www.6vhao.com/zydy/index.html"	//微电影
+//        Spider.create(new SixvhaoPageProcessor()).addUrl("http://www.6vhao.com/dy/index.html")
+//        //.setScheduler(new QueueScheduler().setDuplicateRemover(new BloomFilterDuplicateRemover(1000000)) )
+//        .setScheduler(new FileCacheQueueScheduler("c:/data/webmagic/6vhao"))
+//        .thread(5).run();
+        Spider.create(new SixvhaoIndexProcessor()).addUrl(
+        		"http://www.6vhao.com/jddy/2009-03-15/6346.html"
+        		
+        		
         		)
-        //.setScheduler(new QueueScheduler().setDuplicateRemover(new BloomFilterDuplicateRemover(1000000)) )
-        .setScheduler(new FileCacheQueueScheduler("c:/data/webmagic/6vhao"))
-        .thread(10).run();
-//        Spider.create(new SixvhaoPageProcessor()).addUrl(
-//        		"http://www.6vhao.com/dy/index.html",	//最新
-//        		"http://www.6vhao.com/gq/index.html",	//高清
-//        		"http://www.6vhao.com/3D/index.html",	//3D
-//        		"http://www.6vhao.com/dlz/index.html",	//国产剧.港台剧连载
-//        		"http://www.6vhao.com/rj/index.html",	//日韩剧
-//        		"http://www.6vhao.com/mj/index.html",	//欧美剧
-//        		"http://www.6vhao.com/zy/index.html",	//综艺
-//        		"http://www.6vhao.com/jddy/index.html",	//动画电影
-//        		"http://www.6vhao.com/zydy/index.html"	//微电影
-//        		
-//        		
-//        		)
-//        .thread(1).run();
+        .thread(1).run();
         endTime = new Date().getTime();
         System.out.println("========6v电影小爬虫【结束】喽！=========");
         System.out.println("一共爬到"+num+"个电影信息！用时为："+(endTime-startTime)/1000+"s");

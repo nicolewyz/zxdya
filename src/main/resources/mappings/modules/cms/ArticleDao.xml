@@ -6,6 +6,7 @@
 		a.id AS "id",
 		a.category_id AS "category.id",
 		a.title AS "title",
+		a.real_title AS "realTitle",
 		a.link AS "link",
 		a.color AS "color",
 		a.image AS "image",
@@ -60,6 +61,9 @@
 					<if test="dbName == 'oracle'">'%'||#{title}||'%'</if>
 					<if test="dbName == 'mssql'">'%'+#{title}+'%'</if>
 					<if test="dbName == 'mysql'">CONCAT('%', #{title}, '%')</if>
+			</if>
+			<if test="beginDate != null and beginDate != ''">
+				AND a.update_date >=  #{beginDate} 
 			</if>
 			<if test="posid != null and posid != ''">
 				AND a.posid LIKE 
@@ -117,6 +121,7 @@
 			id,
 			category_id,
 			title,
+			real_title,
 			link,
 			color,
 			image,
@@ -138,6 +143,7 @@
 			#{id},
 			#{category.id},
 			#{title},
+			#{realTitle},
 			#{link},
 			#{color},
 			#{image},
@@ -162,6 +168,7 @@
 		UPDATE cms_article SET 	
 			category_id = #{category.id},
 			title = #{title},
+			real_title = #{realTitle},
 			link = #{link},
 			color = #{color},
 			image = #{image},

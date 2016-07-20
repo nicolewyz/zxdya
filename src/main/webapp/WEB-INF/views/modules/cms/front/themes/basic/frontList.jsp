@@ -4,9 +4,9 @@
 <html>
 <head>
 	<title>${category.name}</title>
+	<meta name="description" content="${site.description}" />
+	<meta name="keywords" content="${site.keywords}" />
 	<meta name="decorator" content="cms_default_${site.theme}"/>
-	<meta name="description" content="电影东东 ${category.description}" />
-	<meta name="keywords" content=" ${category.keywords}" />
 	
 </head>
 <body>
@@ -16,10 +16,14 @@
 		 <ol>
 		 	<cms:frontArticleHitsTop category="${category}"/>
 		 </ol>
-		 <%-- <h4>下载排行</h4>
+		 <h5><i class="icon-star"></i> 月下载排行</h4>
 		 <ol>
-		 	<cms:frontArticleDownloadTop category="${category}"/>
-		 </ol> --%>
+		 	<cms:frontArticleDownloadTop category="${category}" beforeDay="30"/>
+		 </ol>
+		 <h5><i class="icon-star"></i> 年下载排行</h4>
+		 <ol>
+		 	<cms:frontArticleDownloadTop category="${category}" beforeDay="365" pageSize="20"/>
+		 </ol>
 		 
 	   </div>
 	   <div class="span10">

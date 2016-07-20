@@ -113,6 +113,17 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils {
 		}
 	}
 
+	
+	/**
+	 * 获取过去的某天前的时间
+	 * @param date
+	 * @return
+	 */
+	public static Date pastSomeDay(int d) {
+		long t = new Date().getTime()-(24l*60*60*1000 * d);
+		return new Date(t);
+	}
+	
 	/**
 	 * 获取过去的天数
 	 * @param date

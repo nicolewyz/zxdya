@@ -24,7 +24,7 @@ public class ArticleData extends DataEntity<ArticleData> {
 	private String allowComment;// 是否允许评论
 	private String url;			//下载地址
 
-	@Length(min=0, max=255)
+	@Length(min=0 )
 	public String getUrl() {
 		return url;
 	}

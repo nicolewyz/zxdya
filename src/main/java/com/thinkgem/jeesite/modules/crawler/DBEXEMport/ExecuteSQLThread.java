@@ -16,36 +16,38 @@ import com.thinkgem.jeesite.common.index.LuceneUtil;
 import com.thinkgem.jeesite.modules.cms.entity.Article;
 import com.thinkgem.jeesite.modules.cms.entity.ArticleData;
 import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.DBHelper;
+import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.MovieTypeConstants;
 import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.YgdyDao;
 import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.YgdyDaoImpl;
 
-public class ExecuteSQLThread implements Runnable {
+public class ExecuteSQLThread /*implements Runnable*/ {
 	
 	private static Logger logger = LoggerFactory.getLogger(ExecuteSQLThread.class);
 
 	private String type = "";
-	private String category = "";
+	private String toCategory = "";
+	private String fromCategory = "";
 
 	private static String[] otherName = new String[]{"电影天堂","阳光电影"};
+	private static String[] crawlDyName = new String[]{"dy","gndy","zydy","movie"};
 	
 	DBHelper dbhelper = new DBHelper();
 	YgdyDao ygdyDao = new YgdyDaoImpl();
 	
 	public ExecuteSQLThread(){ }
 	
-	public ExecuteSQLThread(String type, String category){ 
+	public ExecuteSQLThread(String type){ 
 		this.type = type;
-		this.category = category;
 	}
 	
 	
-	@Override
+//	@Override
 	public void run() {
 		
         StringBuffer sql = new StringBuffer();
         String lastDate = "";
     	try {
-			Date date = ygdyDao.getLastDate("yg_"+type+"_toArticle");
+			Date date = ygdyDao.getLastDate("resource2article_" + type);
 			SimpleDateFormat simpledf = new SimpleDateFormat("yyyyMMdd");
 			lastDate = simpledf.format(date);
 		} catch (SQLException e) {
@@ -53,7 +55,7 @@ public class ExecuteSQLThread implements Runnable {
 		}
     	
     	sql.delete(0, sql.toString().length());//清空
-        sql.append("select domain,category,name,content,url,publishDate from cms_yg_"+type+" where publishDate>=? order by publishDate");
+        sql.append("select domain,category,name,content,url,publishDate from cms_resouce_"+type+" where  publishDate>=? order by publishDate");
         //设置 sql values 的值
         List<String> sqlValues = new ArrayList<>();	
         sqlValues.add(lastDate);
@@ -97,29 +99,39 @@ public class ExecuteSQLThread implements Runnable {
 				
 				gndy.setName(replaceString(rs.getString("name")));
 				
-				//若不存在《》，则无法取真正的标题，因此过滤
-				if(! gndy.getName().contains("《")) continue;
+				//只有在是电影类型的时候，若不存在《》，则无法取真正的标题，因此过滤
+				if(! ( gndy.getName().contains("《") && gndy.getName().contains("》")) ) {
+					
+					for(String dyName : crawlDyName){
+						
+						if(dyName.equals(gndy.getCategory())) continue;
+					}
+					
+					
+				}
 				
 				gndy.setUrl(rs.getString("url"));
 				gndy.setPublishDate(rs.getString("publishDate"));
 				
 				
 				//lists.add(gndy);
-				
+				//计算id用到的时间
 				if(! dateCount.equals(gndy.getPublishDate().substring(0,10).replace("-", ""))){
 					dateCount = gndy.getPublishDate().substring(0,10).replace("-", "");
 					i = 1;
 				}
 				
 				//赋值到另外两张表中
-				String id = dateCount+ getEveryId(i++, category,4);
+				System.out.println(rs.getString("category")+"-------"+rs.getString("domain"));
+				String fromToCategory = MovieTypeConstants.typeMap.get("TYPE_"+type.toUpperCase()+"_" + rs.getString("category"));
+				String id = dateCount+ getEveryId(i++, fromToCategory, 4);
 				
 				//判断id是否存在在库中，若存在，则查询日期内的最大值
 				sqlCount.delete(0, sql.toString().length());//清空
 		        sqlCount.append("select max(id) c from  cms_article  where id like ?");
 		        List<String> sqlVal_ = new ArrayList<>();
 		        
-		        sqlVal_.add(dateCount + category + "%");
+		        sqlVal_.add(dateCount + fromToCategory + "%");
 		        ResultSet hasDyid_ = dbhelper.executeQuery(sqlCount.toString(), sqlVal_);
 		        if(hasDyid_.next()) {
 		        	id = (hasDyid_.getLong("c")==0 ? Long.parseLong(id) : (hasDyid_.getLong("c")+ 1))   + "";
@@ -138,13 +150,17 @@ public class ExecuteSQLThread implements Runnable {
 				//System.out.println("insert cms_article_data one...");
 				
 				sql.delete(0, sql.toString().length());//清空
-				sql.append("insert into cms_article values(?,'"+ category +"',?,?,'','','','电影东东,最新电影,电影下载','电影东东,最新电影,高清电影,经典电影,最新连续剧',0,null,0,'','','',1,?,1,?,null,0)");
+				sql.append("insert into cms_article values(?,'"+ fromToCategory +"',?,?,'','','','电影东东,最新电影下载，最新电视剧下载，高清电影下载，免费电影下载,3D电影,动漫电影下载,游戏下载','电影东东',0,null,1,'','','',1,?,1,?,null,0)");
 		        //设置 sql values 的值
 		        List<String> sqlValuesArticle = new ArrayList<>();
 		        sqlValuesArticle.add(id);
 		        //sqlValuesArticle.add(gndy.getCategory());
 		        sqlValuesArticle.add(gndy.getName());
-		        sqlValuesArticle.add(gndy.getName().substring(gndy.getName().indexOf("《")+1,gndy.getName().indexOf("》")));
+		        //System.out.println(gndy.getName());
+		        //取真正的名字 ， 《》里的名字
+		        String realName = (gndy.getName().contains("《") && gndy.getName().contains("》"))
+		        		? gndy.getName().substring(gndy.getName().indexOf("《")+1,gndy.getName().indexOf("》")) : gndy.getName();
+		        sqlValuesArticle.add(realName);
 		        sqlValuesArticle.add(gndy.getPublishDate());
 		        sqlValuesArticle.add(gndy.getPublishDate());
 		        
@@ -173,17 +189,17 @@ public class ExecuteSQLThread implements Runnable {
 			}
 			
 			//主动推送百度
-			PushBaidu pushBaidu = new PushBaidu();
-			for(Gndy g : gndys){
-				
-				pushBaidu.call(g.getId());
-			}
+//			PushBaidu pushBaidu = new PushBaidu();
+//			for(Gndy g : gndys){
+//				
+//				pushBaidu.call(g.getId());
+//			}
 			
 			
 			//更新toArticle的时间
 	        YgdyDao ygdyDao = new YgdyDaoImpl();
 			try {
-				ygdyDao.setLastDate("yg_"+type+"_toArticle", new Date());
+				ygdyDao.setLastDate("resource2article_" + type, new Date());
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}

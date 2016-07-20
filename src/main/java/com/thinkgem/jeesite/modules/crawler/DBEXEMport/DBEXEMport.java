@@ -65,27 +65,20 @@ public class DBEXEMport {
 	 * @param type
 	 * @param category
 	 */
-	@Scheduled(cron = "0 55 0/1 * * ?")
+	@Scheduled(cron = "0 55 1 * * ?")
 	public void executScheduled(){
 		logger.info("-------enter executScheduled--------------");
 		
 		//先抓取最近更新的电影和电视剧
-		NewIncreMain newMain = new NewIncreMain();
-		newMain.run();
+//		NewIncreMain newMain = new NewIncreMain();
+//		newMain.run();
 				
 		//导入到另外的表中（cms_article和cms_article_data）
-		new Thread(new ExecuteSQLThread("gndy",""+2)).start();
+		//new Thread(new ExecuteSQLThread("gndy",""+2)).start();
 		
-		//建立索引，不能并行，否则会出问题
-		try {
-			Thread.currentThread().sleep(1000l * 60 * 30);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-		//连续剧
-		new Thread(new ExecuteSQLThread("tv",""+3)).start();
-		//综艺
-		//new Thread(new ExecuteSQLThread("zongyi",""+4)).start();
+		new ExecuteSQLThread("yg").run();
+		new ExecuteSQLThread("6v").run();
+		new ExecuteSQLThread("lbl").run();
 	}
 	
 	public static void main(String[] args) {

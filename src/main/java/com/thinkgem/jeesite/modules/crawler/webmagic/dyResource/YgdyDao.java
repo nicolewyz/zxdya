@@ -45,7 +45,7 @@ public interface YgdyDao {
     public int updateArticle(YgdyArticle article, String type, String tablePre)  throws SQLException ;
     
     /**
-     * 获取数据中指定类别，指定时间的电影信息
+     * 获取数据中指定类别，指定时间之后的电影信息
      * @param table
      * @param type
      * @param datetime

@@ -4,6 +4,8 @@
 
 <%-- <script src="${ctxStatic}/jquery/jquery-1.9.1.min.js" type="text/javascript"></script> --%>
 <%-- <script src="${ctxStatic}/jquery/jquery-migrate-1.1.1.min.js" type="text/javascript"></script> --%>
+<script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/jquery-migrate/1.4.1/jquery-migrate.min.js"></script>
 <c:if test="${site.theme eq 'basic'}">
 	<link href="//cdn.bootcss.com/bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet">
 	<!-- <script src="//cdn.bootcss.com/bootstrap/2.3.1/js/bootstrap.min.js"></script> -->

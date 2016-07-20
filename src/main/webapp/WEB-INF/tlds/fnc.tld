@@ -76,6 +76,14 @@
   </function>
   
   <function>
+    <description>获取名言警句</description>
+    <name>getSaying</name>
+    <function-class>com.thinkgem.jeesite.modules.cms.utils.CmsUtils</function-class>
+    <function-signature>com.thinkgem.jeesite.modules.cms.entity.Saying getSaying()</function-signature>
+    <example>${fnc:getSaying()}</example>  
+  </function>
+  
+  <function>
     <description>获取文章列表</description>
     <name>getArticleList</name>
     <function-class>com.thinkgem.jeesite.modules.cms.utils.CmsUtils</function-class>
@@ -87,8 +95,8 @@
     <description>获取下载文章列表</description>
     <name>getArticleDownloadList</name>
     <function-class>com.thinkgem.jeesite.modules.cms.utils.CmsUtils</function-class>
-    <function-signature>java.util.List getArticleDownloadList(java.lang.String, java.lang.String, int )</function-signature>
-    <example>${fnc:getArticleDownloadList(siteId, categoryId, number)}</example>  
+    <function-signature>java.util.List getArticleDownloadList(java.lang.String, java.lang.String, int, int )</function-signature>
+    <example>${fnc:getArticleDownloadList(siteId, categoryId, beforeDay, number)}</example>  
   </function>
   
   <function>

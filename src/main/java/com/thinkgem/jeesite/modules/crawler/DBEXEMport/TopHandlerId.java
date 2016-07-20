@@ -1,24 +1,13 @@
 package com.thinkgem.jeesite.modules.crawler.DBEXEMport;
 
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Lazy;
-import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Service;
 
-import com.thinkgem.jeesite.common.index.LuceneUtil;
-import com.thinkgem.jeesite.modules.cms.entity.Article;
-import com.thinkgem.jeesite.modules.cms.entity.ArticleData;
 import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.DBHelper;
-import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.NewIncreMain;
 import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.YgdyDao;
 import com.thinkgem.jeesite.modules.crawler.webmagic.dyResource.YgdyDaoImpl;
 

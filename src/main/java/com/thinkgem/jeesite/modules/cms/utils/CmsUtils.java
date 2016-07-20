@@ -3,7 +3,9 @@
  */
 package com.thinkgem.jeesite.modules.cms.utils;
 
+import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -14,14 +16,17 @@ import com.thinkgem.jeesite.common.utils.StringUtils;
 import com.thinkgem.jeesite.common.mapper.JsonMapper;
 import com.thinkgem.jeesite.common.persistence.Page;
 import com.thinkgem.jeesite.common.utils.CacheUtils;
+import com.thinkgem.jeesite.common.utils.DateUtils;
 import com.thinkgem.jeesite.common.utils.SpringContextHolder;
 import com.thinkgem.jeesite.modules.cms.entity.Article;
 import com.thinkgem.jeesite.modules.cms.entity.Category;
 import com.thinkgem.jeesite.modules.cms.entity.Link;
+import com.thinkgem.jeesite.modules.cms.entity.Saying;
 import com.thinkgem.jeesite.modules.cms.entity.Site;
 import com.thinkgem.jeesite.modules.cms.service.ArticleService;
 import com.thinkgem.jeesite.modules.cms.service.CategoryService;
 import com.thinkgem.jeesite.modules.cms.service.LinkService;
+import com.thinkgem.jeesite.modules.cms.service.SayingService;
 import com.thinkgem.jeesite.modules.cms.service.SiteService;
 
 import javax.servlet.ServletContext;
@@ -38,6 +43,7 @@ public class CmsUtils {
 	private static SiteService siteService = SpringContextHolder.getBean(SiteService.class);
 	private static CategoryService categoryService = SpringContextHolder.getBean(CategoryService.class);
 	private static ArticleService articleService = SpringContextHolder.getBean(ArticleService.class);
+	private static SayingService sayingService = SpringContextHolder.getBean(SayingService.class);
 	private static LinkService linkService = SpringContextHolder.getBean(LinkService.class);
     private static ServletContext context = SpringContextHolder.getBean(ServletContext.class);
 
@@ -143,6 +149,17 @@ public class CmsUtils {
 	}
 	
 	/**
+	 * 获取名言警句
+	 * @param articleId 文章编号
+	 * @return
+	 */
+	public static Saying getSaying(){
+		Calendar ca = Calendar.getInstance();//创建一个日期实例
+		ca.setTime(new Date());//实例化一个日期
+		return sayingService.findByIds(ca.get(Calendar.DAY_OF_YEAR)+"");
+	}
+	
+	/**
 	 * 获取文章列表
 	 * @param siteId 站点编号
 	 * @param categoryId 分类编号
@@ -181,17 +198,22 @@ public class CmsUtils {
 	 * 获取文章列表
 	 * @param siteId 站点编号
 	 * @param categoryId 分类编号
+	 * @param timeType 时间类型（周，月，年）
 	 * @param number 获取数目
 	 *  
 	 * @return
 	 * ${fnc:getArticleDownloadList(category.site.id, category.id, not empty pageSize?pageSize:10 )}"
 	 */
-	public static List<Article> getArticleDownloadList(String siteId, String categoryId, int number ){
+	public static List<Article> getArticleDownloadList(String siteId, String categoryId, int beforeDay, int number ){
 		Page<Article> page = new Page<Article>(1, number, -1);
 		Category category = new Category(categoryId, new Site(siteId));
 		category.setParentIds(categoryId);
 		Article article = new Article(category);
 		article.setDelFlag(Article.DEL_FLAG_NORMAL);
+		article.setBeginDate(DateUtils.pastSomeDay(beforeDay));
+		System.out.println(beforeDay);
+		System.out.println(DateUtils.formatDateTime(DateUtils.pastSomeDay(beforeDay)));
+		page.setOrderBy(" hits desc ");
 		page = articleService.findDownloadPage(page, article, false);
 		return page.getList();
 	}

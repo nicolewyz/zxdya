@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.thinkgem.jeesite.modules.cms.dao.SayingDao">
+    
+	<sql id="cmsSayingColumns">
+		a.id AS "id",
+		a.name AS "name",
+		a.desc AS "desc"
+	</sql>
+	
+	<select id="findById" resultType="Saying">
+		SELECT 
+			<include refid="cmsSayingColumns"/>
+		FROM cms_saying a
+		WHERE a.id = #{id}
+	</select>
+	
+</mapper>

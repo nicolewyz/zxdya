@@ -57,7 +57,7 @@ public class LuceneIndexUtils {
 		System.out.println("当前存储的文档数：:"+indexWriter.numDocs());
 		
 		YgdyDao dao = new YgdyDaoImpl();
-		List<Gndy> lists = dao.getGndys("cms_yg_gndy", "2", "20160501");
+		List<Gndy> lists = dao.getGndys("cms_resouce_gndy", "2", "20160501");
 		Iterator<Gndy> it = lists.iterator();
 		while(it.hasNext()){
 			

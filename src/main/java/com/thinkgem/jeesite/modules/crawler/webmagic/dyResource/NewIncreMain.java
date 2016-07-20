@@ -24,18 +24,18 @@ import us.codecraft.webmagic.scheduler.component.BloomFilterDuplicateRemover;
 public class NewIncreMain  {
 	
 	public void run(){
-		DyttIndexProcessor dytt = new DyttIndexProcessor();
-    	dytt.run();
+		//DyttIndexProcessor dytt = new DyttIndexProcessor();
+    	//dytt.run();
         
-    	YgdyIndexProcessor ygdy = new YgdyIndexProcessor();
-    	ygdy.run();
+    	//YgdyIndexProcessor ygdy = new YgdyIndexProcessor();
+    	//ygdy.run();
 	}
 
     public static void main(String[] args) {
-    	DyttIndexProcessor dytt = new DyttIndexProcessor();
-    	dytt.run();
+    	//DyttIndexProcessor dytt = new DyttIndexProcessor();
+    	//dytt.run();
         
-    	YgdyIndexProcessor ygdy = new YgdyIndexProcessor();
-    	ygdy.run();
+    	//YgdyIndexProcessor ygdy = new YgdyIndexProcessor();
+    	//ygdy.run();
     }
 }

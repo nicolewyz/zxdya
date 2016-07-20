@@ -1,16 +1,22 @@
 package com.thinkgem.jeesite.modules.crawler.webmagic.dyResource;
 
-import java.sql.SQLException;
-import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Site;
 import us.codecraft.webmagic.Spider;
 import us.codecraft.webmagic.processor.PageProcessor;
+import us.codecraft.webmagic.scheduler.FileCacheQueueScheduler;
+import us.codecraft.webmagic.scheduler.QueueScheduler;
+import us.codecraft.webmagic.scheduler.component.BloomFilterDuplicateRemover;
 
 /**
- * 首页的爬虫
+ * 阳光电影爬虫<br>
+ * 输入搜索用户关键词(keyword)，并把搜出来的用户信息爬出来<br>
 
  * @date 2016-5-3
  * @website ghb.soecode.com
@@ -20,15 +26,13 @@ import us.codecraft.webmagic.processor.PageProcessor;
  */
 public class YgdyIndexProcessor implements PageProcessor{
     //抓取网站的相关配置，包括：编码、抓取间隔、重试次数等
-    private Site site = Site.me().setCharset("gb2312").setRetryTimes(10).setTimeOut(10000).setSleepTime(1000);
+    private Site site = Site.me().setCharset("gb2312").setRetryTimes(20).setTimeOut(10000).setSleepTime(2000);
     //爬虫电影数量
-    private static int dynum = 0;
-    
-    //爬虫电视剧数量
-    private static int tvnum = 0;
-    
+    private static int num = 0;
+    //搜索关键词
+    //private static String keyword = "JAVA";
     //数据库持久化对象，用于将用户信息存入数据库
-    YgdyDao ygdyDao = new YgdyDaoImpl();
+    private YgdyDao ygdyDao = new YgdyDaoImpl();
 
     
 
@@ -43,89 +47,78 @@ public class YgdyIndexProcessor implements PageProcessor{
     @Override
     public void process(Page page) {
 
-    	String lastDate = "";
-    	try {
-			Date date = ygdyDao.getLastDate("yg_"+"gndy");
-			SimpleDateFormat simpledf = new SimpleDateFormat("yyyyMMdd");
-			lastDate = simpledf.format(date);
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
         //1. 如果是用户列表页面 【入口页面】，将所有用户的详细页面的url放入target集合中。
-        if(page.getUrl().regex("http://www\\.ygdy8\\.net/index\\.html").match()){
-            page.addTargetRequests(page.getHtml().xpath("//div[@class='co_content8']/ul/table").links().regex(".*/html/gndy/.*/[\\d]{8}/.*").all());
-            page.addTargetRequests(page.getHtml().xpath("//div[@class='co_content3']/ul/table").links().regex(".*/html/tv/.*/[\\d]{8}/.*").all());
-            
-        //2. 如果是用户详细页面
-        }else if(page.getUrl().regex("http://www\\.ygdy8\\.net/html/gndy/[\\w]+/\\d{8}/\\d+\\.html").match()){
-        	
+        if(page.getUrl().regex("http://www\\.ygdy8\\.net/html/\\w+/index\\.html").match()){
+            page.addTargetRequests(page.getHtml().xpath("//div[@class='title_all']//a").links().all());
+        	page.addTargetRequests(page.getHtml().xpath("//div[@class='co_content8']//table//a").links().all());
+        //资源列表					
+    	}else if(page.getUrl().regex("http://www\\.ygdy8\\.net/html/\\w+/\\w+/index\\.html").match()){
+        	page.addTargetRequests(page.getHtml().xpath("//div[@class='co_content8']/div[@class='x']").links().all());
+        	page.addTargetRequests(page.getHtml().xpath("//div[@class='co_content8']/ul").links().all());
+    	//资源列表					
+        }else if(page.getUrl().regex("http://www\\.ygdy8\\.net/html/\\w+/[\\w]+/list_\\d+_\\d+\\.html").match()){
+        	page.addTargetRequests(page.getHtml().xpath("//div[@class='co_content8']//a").links().all());
+        	page.addTargetRequests(page.getHtml().xpath("//div[@class='co_content8']/div[@class='x']").links().all());
+        //2. 如果是用户详细页面	http://www.ygdy8.net/html/tv/gangtai/tw/20100920/28275.html
+        }else if(page.getUrl().regex("(http://www\\.ygdy8\\.net/html/\\w+/\\w+/\\d{8}/\\d+\\.html)|(http://www\\.ygdy8\\.net/html/\\w+/\\w+/\\w+/\\d{8}/\\d+\\.html)").match()){
         	//判断电影类型
-        	String category = findDyType(page.getUrl().toString(),"gndy");
-        	String publishDate = findDyType(page.getUrl().toString(),category);
-        	System.out.println(publishDate);
+        	String category = findDyType(page.getUrl().toString(),"html");
+        	String categoryDetail = findDyType(page.getUrl().toString(),category);
+        	String publishDate = findDyType(page.getUrl().toString(),"datetime");
         	
-        	if(publishDate.compareTo(lastDate) <= 0) return;
-        	
-            dynum++;//电影数++
+            
             /*实例化ZhihuUser，方便持久化存储。*/
             YgdyArticle article = new YgdyArticle();
             /*从下载到的用户详细页面中抽取想要的信息，这里使用xpath居多*/
             /*为了方便理解，抽取到的信息先用变量存储，下面再赋值给对象*/
             String dyName = page.getHtml().xpath("//title/text()").get();
-            String content = page.getHtml().xpath("//div[@class='co_content8']//div[@id='Zoom']/span/p").get();
-            String url = page.getHtml().xpath("//div[@class='co_content8']//div[@id='Zoom']/span/table//a").links().get();
+            List<String> imgs = page.getHtml().xpath("//div[@class='co_content8']//div[@id='Zoom']//img").all();
+            List<String> contents = page.getHtml().xpath("//div[@class='co_content8']//div[@id='Zoom']//tidyText()").all();
+            List<String> urls = page.getHtml().xpath("//div[@class='co_content8']//div[@id='Zoom']//table//a/outerHtml()").all();
             
             //对象赋值
             article.setDyName(dyName);
-            article.setDomain("www.ygdy8.net");
+            article.setDomain(page.getUrl().toString());
             article.setCategory(category);
-            article.setContent(content); 
-            article.setUrl(url);
+            
+            //拼接content
+            StringBuffer sbContent = new StringBuffer(500);
+            sbContent.append(imgs.size()>0?imgs.get(0):"");
+            
+            //去掉所有的链接
+            Pattern pattern = Pattern.compile("(<.+?>)|(http\\:\\/\\/.+)|(ftp\\:\\/\\/.+)", Pattern.DOTALL);
+            Matcher matcher = null;
+            //文字内容
+            for(int i=0; i < contents.size(); i++){
+            	if(i == (contents.size()-1)){	//最后一行，处理掉“01”“001”的情况
+            		matcher = pattern.matcher(contents.get(i).replaceAll("\\d+", ""));
+            	}else{
+            		matcher = pattern.matcher(contents.get(i));
+            	}
+            	
+            	sbContent.append(matcher.replaceAll("").replaceAll("【下载地址】", ""));
+            	sbContent.append("\n");
+            }
+            //图片
+            for(int i = 1; i < imgs.size(); i++){
+            	sbContent.append(imgs.get(i) );
+            	sbContent.append("\n");
+            }
+            
+            
+            //去掉空行
+            article.setContent(sbContent.toString().replaceAll("((\r\n)|\n)[\\s\t ]*(\\1)+", "$1").replaceAll("^((\r\n)|\n)", "")); 
+            
+            StringBuilder sbUrl = new StringBuilder(500);
+            for(String str : urls){
+            	sbUrl.append(str).append("\n");
+            }
+            article.setUrl(sbUrl.toString());
             article.setPublishDate(publishDate);
 
-            //保存电影信息到数据库
-            try {
-				int result = ygdyDao.updateArticle(article,"gndy","");
-				if(result==1){
-					System.out.println("电影num:"+dynum +" " + article.toString());//输出对象
-				}
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-        }else if(page.getUrl().regex("http://www\\.ygdy8\\.net/html/tv/[\\w]+/\\d{8}/\\d+\\.html").match()){
-        	//判断电视剧类型
-        	String category = findDyType(page.getUrl().toString(),"tv");
-        	String publishDate = findDyType(page.getUrl().toString(),category);
-        	System.out.println(publishDate);
-        	
-        	if(publishDate.compareTo(lastDate) <= 0) return;
-        	
-            tvnum++;//电视剧数++
-            /*实例化ZhihuUser，方便持久化存储。*/
-            YgdyArticle article = new YgdyArticle();
-            /*从下载到的用户详细页面中抽取想要的信息，这里使用xpath居多*/
-            /*为了方便理解，抽取到的信息先用变量存储，下面再赋值给对象*/
-            String dyName = page.getHtml().xpath("//title/text()").get();
-            String content = page.getHtml().xpath("//div[@class='co_content8']//div[@id='Zoom']/span/p").get();
-            String url = page.getHtml().xpath("//div[@class='co_content8']//div[@id='Zoom']/span/table//a").links().get();
-            
-            //对象赋值
-            article.setDyName(dyName);
-            article.setDomain("www.ygdy8.net");
-            article.setCategory(category);
-            article.setContent(content); 
-            article.setUrl(url);
-            article.setPublishDate(publishDate);
-            
-            //保存电视剧信息到数据库
-            try {
-				int result = ygdyDao.updateArticle(article,"tv","");
-				if(result==1){
-					System.out.println("电视剧num:"+tvnum +" " + article.toString());//输出对象
-				}
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
+            num++;//电影数++
+            System.out.println("num:"+num  );//输出对象
+            ygdyDao.saveArticle(article,"yg");//保存用户信息到数据库
         }
     }
 
@@ -140,6 +133,10 @@ public class YgdyIndexProcessor implements PageProcessor{
 		  //将字符串以/切分并存到数组中  
 		  String[] split = url.split("/");  
 		  
+		  Pattern patt= Pattern.compile("\\d{8}",Pattern.DOTALL);
+           
+		   
+          
 		  String type = "";
 		  boolean flag =  false;
 		  for(String str : split){  
@@ -151,6 +148,13 @@ public class YgdyIndexProcessor implements PageProcessor{
 			  if(aftername.equalsIgnoreCase(str)){
 				  flag = true;
 			  }
+			  //匹配时间
+			  if(aftername.equals("datetime")){
+				  Matcher m = patt.matcher(str);   
+				  if(m.find()){
+					  return str;
+				  }
+			  }
 		  }
 		return type.contains("index")?"":type;
 	}
@@ -160,46 +164,61 @@ public class YgdyIndexProcessor implements PageProcessor{
         return this.site;
     }
 
-	public void run(){
-		long startTime ,endTime;
-        System.out.println("=====www.ygdy8.net===电影信息首页小爬虫【启动】喽！=========");
-        startTime = new Date().getTime();
-        Spider.create(new YgdyIndexProcessor()).addUrl("http://www.ygdy8.net/index.html" )
-        .thread(1).run();
-        endTime = new Date().getTime();
-        System.out.println("=====www.ygdy8.net===电影首页小爬虫【结束】喽！=========");
-        
-      //更新最新时间
-        YgdyDao ygdyDao = new YgdyDaoImpl();
-		try {
-			ygdyDao.setLastDate("yg_"+"gndy", new Date());
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-        
-        System.out.println("======www.ygdy8.net ==一共爬到"+dynum+"个电影信息,"+tvnum+"个电视剧！用时为："+(endTime-startTime)/1000+"s");
-        
-	}
-	
     public static void main(String[] args) {
         long startTime ,endTime;
-        System.out.println("=====www.ygdy8.net===电影信息首页小爬虫【启动】喽！=========");
+        System.out.println("========阳光电影信息小爬虫【启动】喽！=========");
         startTime = new Date().getTime();
-        Spider.create(new YgdyIndexProcessor()).addUrl("http://www.ygdy8.net/index.html" )
-        .thread(1).run();
+        //入口为：【https://www.zhihu.com/search?type=people&q=xxx 】，其中xxx 是搜索关键词
+//        Spider.create(new YgdyIndexProcessor()).addUrl(
+//        		//"http://www.ygdy8.net/plus/sitemap.html",		//网站地图
+//        		"http://www.ygdy8.net/html/dongman/index.html",	//动漫
+//        		"http://www.ygdy8.net/html/game/index.html",	//游戏
+//        		"http://www.ygdy8.net/html/gndy/index.html",	//电影
+//        		"http://www.ygdy8.net/html/tv/index.html"		//电视剧
+//        		)
+//        .setScheduler(new FileCacheQueueScheduler("c:/data/webmagic/ygdy"))
+//        .thread(50).run();
+        
+        Spider.create(new YgdyIndexProcessor()).addUrl(
+        		"http://www.ygdy8.net/html/gndy/jddy/20151007/49217.html",
+        		"http://www.ygdy8.net/html/gndy/dyzz/20160303/50368.html",
+        		"http://www.ygdy8.net/html/gndy/jddy/20160111/49938.html",
+        		"http://www.ygdy8.net/html/gndy/jddy/20151128/49597.html",
+        		"http://www.ygdy8.net/html/gndy/jddy/20160308/50424.html",
+        		"http://www.ygdy8.net/html/gndy/dyzz/20151123/49568.html",
+        		"http://www.ygdy8.net/html/tv/rihantv/riju/20090109/16434.html",
+        		"http://www.ygdy8.net/html/tv/hepai/hepaitv/20081020/14873.html",
+        		"http://www.ygdy8.net/html/gndy/jddy/20151207/49686.html",
+        		"http://www.ygdy8.net/html/gndy/dyzz/20110623/32889.html",
+        		"http://www.ygdy8.net/html/gndy/dyzz/20111004/34484.html",
+        		"http://www.ygdy8.net/html/gndy/jddy/20150409/47802.html",
+        		"http://www.ygdy8.net/html/3gp/3gpmovie/20130126/41203.html",
+        		"http://www.ygdy8.net/html/gndy/jddy/20141014/46395.html",
+        		"http://www.ygdy8.net/html/3gp/3gpmovie/20100618/26588.html",
+        		"http://www.ygdy8.net/html/gndy/dyzz/20100617/26572.html",
+        		"http://www.ygdy8.net/html/gndy/dyzz/20140324/44722.html",
+        		"http://www.ygdy8.net/html/gndy/dyzz/20110327/31488.html",
+        		"http://www.ygdy8.net/html/gndy/dyzz/20130901/43028.html",
+        		"http://www.ygdy8.net/html/gndy/dyzz/20130616/42425.html",
+        		"http://www.ygdy8.net/html/gndy/dyzz/20110509/32189.html",
+        		"http://www.ygdy8.net/html/gndy/jddy/20110505/32115.html",
+        		"http://www.ygdy8.net/html/gndy/jddy/20110523/32406.html",
+        		"http://www.ygdy8.net/html/gndy/jddy/20110529/32500.html",
+        		"http://www.ygdy8.net/html/gndy/jddy/20110519/32346.html",
+        		"http://www.ygdy8.net/html/gndy/jddy/20130427/42022.html",
+        		"http://www.ygdy8.net/html/gndy/dyzz/20130328/41763.html",
+        		"http://www.ygdy8.net/html/gndy/dyzz/20130220/41489.html",
+        		"http://www.ygdy8.net/html/gndy/jddy/20110623/32891.html",
+        		"http://www.ygdy8.net/html/gndy/jddy/20120827/39158.html",
+        		"http://www.ygdy8.net/html/gndy/dyzz/20120502/37515.html",
+        		"http://www.ygdy8.net/html/gndy/dyzz/20120415/37281.html",
+        		"http://www.ygdy8.net/html/gndy/dyzz/20120404/37109.html"
+        		
+        		)
+        .thread(10).run();
+        
         endTime = new Date().getTime();
-        System.out.println("=====www.ygdy8.net===电影首页小爬虫【结束】喽！=========");
-        
-      //更新最新时间
-        YgdyDao ygdyDao = new YgdyDaoImpl();
-		try {
-			ygdyDao.setLastDate("yg_"+"gndy", new Date());
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-        
-        System.out.println("======www.ygdy8.net ==一共爬到"+dynum+"个电影信息,"+tvnum+"个电视剧！用时为："+(endTime-startTime)/1000+"s");
-        
-        
+        System.out.println("========阳光电影小爬虫【结束】喽！=========");
+        System.out.println("一共爬到"+num+"个用户信息！用时为："+(endTime-startTime)/1000+"s");
     }
 }

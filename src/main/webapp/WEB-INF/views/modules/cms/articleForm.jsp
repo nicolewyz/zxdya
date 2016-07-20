@@ -64,6 +64,9 @@
 					<form:options items="${fns:getDictList('color')}" itemLabel="label" itemValue="value" htmlEscape="false" />
 				</form:select>
 			</div>
+			<div class="controls">
+				<form:input path="realTitle" htmlEscape="false" maxlength="50" class="input-xxlarge measure-input required"/>
+			</div>
 		</div>
         <div id="linkBody" class="control-group" style="display:none">
             <label class="control-label">外部链接:</label>
@@ -79,6 +82,7 @@
 				<span class="help-inline">多个关键字，用空格分隔。</span>
 			</div>
 		</div>
+		
 		<div class="control-group">
 			<label class="control-label">权重:</label>
 			<div class="controls">
@@ -111,6 +115,13 @@
 			<div class="controls">
 				<form:textarea id="content" htmlEscape="true" path="articleData.content" rows="4" maxlength="200" class="input-xxlarge"/>
 				<sys:ckeditor replace="content" uploadPath="/cms/article" />
+			</div>
+		</div>
+		<div class="control-group">
+			<label class="control-label">URL:</label>
+			<div class="controls">
+				<%-- <form:input path="url" htmlEscape="false" maxlength="200" class="input-xlarge"/> --%>
+				<form:textarea path="url"/>
 			</div>
 		</div>
 		<div class="control-group">

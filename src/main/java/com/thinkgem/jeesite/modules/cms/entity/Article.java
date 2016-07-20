@@ -28,7 +28,8 @@ public class Article extends DataEntity<Article> {
 	private static final long serialVersionUID = 1L;
 	private Category category;// 分类编号
 	private String title;	// 标题
-    private String link;	// 外部链接
+	private String realTitle;//真正标题
+	private String link;	// 外部链接
 	private String color;	// 标题颜色（red：红色；green：绿色；blue：蓝色；yellow：黄色；orange：橙色）
 	private String image;	// 文章图片
 	private String keywords;// 关键字
@@ -81,9 +82,17 @@ public class Article extends DataEntity<Article> {
 	public String getTitle() {
 		return title;
 	}
-
+	
 	public void setTitle(String title) {
 		this.title = title;
+	}
+	
+	public String getRealTitle() {
+		return realTitle;
+	}
+	
+	public void setRealTitle(String realTitle) {
+		this.realTitle = realTitle;
 	}
 
     @Length(min=0, max=255)

@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>${site.title} - <sitemesh:title default="电影东东"/> - 最新电影 - 免费下载 - 高清电影 - 经典电影 - 免费电影 - 最新大片 - 最新连续剧  - 最新美剧 </title>
+	<title>最新电影下载，<sitemesh:title default="电影东东"/>，最新电视剧下载，高清电影下载，最新电影下载 ，电影下载，高清电影下载，经典电影下载，最新连续剧下载，最新美剧下载，电影东东下载网 </title>
 	<%@include file="/WEB-INF/views/modules/cms/front/include/head.jsp" %>
 	<!-- Baidu tongji analytics -->
 	<script>var _hmt = _hmt || [];(function() {  var hm = document.createElement("script");  hm.src = "//hm.baidu.com/hm.js?79e3009a98e37abe72603a2e9ac366ca";  var s = document.getElementsByTagName("script")[0];  s.parentNode.insertBefore(hm, s);})();</script>
@@ -32,7 +32,7 @@
           <div class="nav-collapse">
             <ul id="main_nav" class="nav nav-pills">
              	<li class="${not empty isIndex && isIndex ? 'active' : ''}"><a href="${ctx}/index-1${fns:getUrlSuffix()}"><span>${site.id eq '1'?'首　 页':'返回主站'}</span></a></li>
-				<c:forEach items="${fnc:getMainNavList(site.id)}" var="category" varStatus="status"><c:if test="${status.index lt 6}">
+				<c:forEach items="${fnc:getMainNavList(site.id)}" var="category" varStatus="status"><c:if test="${status.index lt 8}">
                     <c:set var="menuCategoryId" value=",${category.id},"/>
 		    		<li class="${requestScope.category.id eq category.id||fn:indexOf(requestScope.category.parentIds,menuCategoryId) ge 1?'active':''}"><a href="${category.url}" target="${category.target}"><span>${category.name}</span></a></li>
 		    	</c:if></c:forEach>
@@ -49,9 +49,9 @@
 				    </ul>
 				    <!--[if lte IE 6]><script type="text/javascript">$('#themeSwitch').hide();</script><![endif]-->
 			    </li> --%>
-			    <li >
+			    <!-- <li >
 	            	<a id=setfavorite href="http://www.zxdya.com" title="添加收藏" class="pull-right"><font color=green>添加收藏</font></a> 
-			    </li>
+			    </li> -->
             </ul>
             <form class="navbar-form pull-right" action="${ctx}/search" method="get">
               	<input type="text" name="q" maxlength="30" style="width:200px;" placeholder="输入搜索词，按回车" value="${q}">
@@ -75,8 +75,8 @@
     </div> <!-- /container -->
     <script src="${ctxStaticTheme}/script.js" type="text/javascript"></script>
     <script src="//cdn.bootcss.com/bootstrap/2.3.1/js/bootstrap.min.js"></script>
-    <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
-	<script src="http://cdn.bootcss.com/jquery-migrate/1.4.1/jquery-migrate.min.js"></script>
+    <!-- <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/jquery-migrate/1.4.1/jquery-migrate.min.js"></script> -->
 	
 	<script>
 	if (!window.jQuery) {
@@ -88,7 +88,7 @@
 	
     <script type="text/javascript"> 
     
-	$(document).ready(function(){ 
+	/* $(document).ready(function(){ 
 		// 添加收藏 
 		$("#setfavorite").click(function(){ 
 		            var ctrl = (navigator.userAgent.toLowerCase()).indexOf('mac') != -1 ? 'Command/Cmd': 'CTRL'; 
@@ -101,7 +101,7 @@
 		            }	
 		                return false; 
 		}); 
-	}); 
+	});  */
 	
 	</script> 
 	
